@@ -6,6 +6,7 @@
   --overlay: rgba(192, 52, 25, 0.9);
   --gris: rgba(0, 0, 0, 0.6);
   --texte: rgba(0, 0, 0, 0.9);
+  --bordure: rgba(0, 0, 0, 0.4);
   --noir: #000000;
 }
 
@@ -174,6 +175,30 @@ a.wp-block-button__link.has-texte-background-color:focus, a.wp-block-button__lin
   color: rgba(0, 0, 0, 0.9);
 }
 .wp-block-button.is-style-outline a.wp-block-button__link.has-texte-color:focus, .wp-block-button.is-style-outline a.wp-block-button__link.has-texte-color:hover {
+  filter: brightness(0.8);
+}
+
+.has-bordure-color {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.has-bordure-background-color {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+a.wp-block-button__link.has-bordure-background-color {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+a.wp-block-button__link.has-bordure-background-color:focus, a.wp-block-button__link.has-bordure-background-color:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  filter: brightness(0.8);
+}
+
+.wp-block-button.is-style-outline a.wp-block-button__link.has-bordure-color {
+  border-color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.4);
+}
+.wp-block-button.is-style-outline a.wp-block-button__link.has-bordure-color:focus, .wp-block-button.is-style-outline a.wp-block-button__link.has-bordure-color:hover {
   filter: brightness(0.8);
 }
 

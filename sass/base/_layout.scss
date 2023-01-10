@@ -13,6 +13,7 @@ body {
 	--margin-y-1: 3rem;
 	--margin-y-2: 6rem;
 	--padding-x:20px;
+	--padding-x-header:20px;
 	--padding-x-decor:var(--padding-x);
 	--padding-x-pleine-largeur:0;
 	--largeur-max:1920px;
@@ -29,11 +30,13 @@ body {
 
 
 	@include bp(lg) {
-		--padding-x : calc(50vw - 920px/2);
+		--padding-x : 10vw;
+		--padding-x-header:5vw;
 	}
 	
 	@include bp(xl) {
-		--padding-x-decor: calc(50vw - 1200px/2);
+		--padding-x: calc(50vw - 1114px/2);
+		--padding-x-header:var(--padding-x);
 	}
 
 	@include bp(xxl) {

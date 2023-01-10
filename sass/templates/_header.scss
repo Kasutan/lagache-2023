@@ -2,11 +2,14 @@
 ## Site header
 --------------------------------------------------------------*/
 .site-header {
+	--taille-logo:13rem;
+	
 	align-items: center;
 	background-color: var(--blanc);
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr var(--taille-logo) 1fr;
 	justify-content: space-between;
-	padding: 10px var(--padding-x);
+	padding: 10px var(--padding-x-header);
 	position: relative;
 	z-index:10;
 
@@ -14,19 +17,15 @@
 		position: relative;
 	}
 
+	@include bp(md) {
+	}
+	@include bp(lg) {
+	}
+
 }
 
 .title-area {
-	flex-grow:0;
-	flex-shrink:0;
-	margin-right: 30px;
-	max-width:18rem;
-	@include bp(lg) {
-		max-width: 22rem;
-	}
-	@include bp(xl) {
-		max-width: 24rem;
-	}
+	grid-column: 2;
 }
 
 
@@ -41,6 +40,15 @@
 .custom-logo {
 	display: block;
 	margin:0;
+}
+
+.header-navigation {
+	justify-self: end;
+	grid-column: 3;
+}
+
+.acces-client {
+	display: none;
 }
 
 //Header sticky toutes tailles d'écran
@@ -62,25 +70,45 @@
 
 @include bp(md) {
 	.site-header {
-		padding-top:0;
+		--taille-logo:15rem;
 	}
 
 	.admin-bar .site-header.js-sticky {
 		top:32px;
 	}
 
-	.header-navigation {
-		display: flex;
-		flex-direction: column;
-		flex-grow:1;
-		align-items: flex-end;
-	}
+	
 }
 
 @include bp(lg) {
 	.site-header {
-		justify-content: flex-start;
-		padding-bottom:0;
+		--taille-logo:17.7rem;
+		display: flex;
+		flex-direction: column;
+		padding:20px var(--padding-x-header) 10px;
+
+	}
+	.title-area {
+		max-width: var(--taille-logo);
+	}
+	.header-navigation {
+		width:100%;
+	}
+
+	a.acces-client {
+		background-color: var(--orange);
+		@include box-shadow;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		color:var(--blanc);
+		display: block;
+		@include fs(12);
+		font-weight: 700;
+		padding:1rem;
+		position: absolute;
+		right:var(--padding-x-header);
+		text-transform:uppercase;
+		top:0;
 	}
 
 }
