@@ -1,0 +1,112 @@
+{
+    "key": "group_5f0c2bd7ee2a0",
+    "title": "Options générales",
+    "fields": [
+        {
+            "key": "field_608ac16ae3a8c",
+            "label": "Page des actualités",
+            "name": "page_actualites",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "Réglage utilisé pour le fil d'ariane et pour le bouton \"voir toutes les actualités\"",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
+        },
+        {
+            "key": "field_6239a16d7bd62",
+            "label": "Page mentions légales",
+            "name": "page_mentions_legales",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "Réglage utilisé pour le lien dans le pied de page",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
+        },
+        {
+            "key": "field_60a0e771c0bde",
+            "label": "Image bannière par défaut",
+            "name": "lagache_bg_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "jpg, jpeg",
+            "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_63bd3e8fc525b",
+            "label": "Lien vers l'accès client dans l'en-tête",
+            "name": "lagache_acces_client",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "site-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1673347784
+}

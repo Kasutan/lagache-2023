@@ -1,0 +1,69 @@
+.collaborateurs {
+  --cote-image:29.3rem;
+  color: var(--gris);
+  margin-bottom: var(--margin-y-2);
+}
+.collaborateurs .liste-administrateurs {
+  column-gap: 2rem;
+  row-gap: 3.2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.collaborateurs .carte {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: var(--cote-image);
+  text-align: center;
+  width: 100%;
+}
+.collaborateurs .image {
+  width: 100%;
+}
+.collaborateurs .image img {
+  width: 100%;
+  height: 100%;
+}
+.collaborateurs .infos {
+  padding: 2.2rem 1rem;
+}
+.collaborateurs .nom {
+  color: var(--gris);
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.collaborateurs .fonction {
+  font-size: calc(12 * var(--taille-texte) / 14);
+  color: var(--gris-texte);
+  font-weight: 300;
+  margin-bottom: 0;
+}
+.collaborateurs .entreprise {
+  font-size: calc(10 * var(--taille-texte) / 14);
+  color: var(--gris-texte);
+  font-weight: 300;
+  font-style: italic;
+}
+.collaborateurs .fonctions-lagache {
+  font-size: calc(12 * var(--taille-texte) / 14);
+}
+.collaborateurs a {
+  margin: auto auto 1rem;
+}
+.collaborateurs a path {
+  transition: fill var(--transition);
+}
+.collaborateurs a:focus path, .collaborateurs a:hover path {
+  fill: var(--bleu);
+}
+@media (min-width: 960px) {
+  .collaborateurs .liste-administrateurs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .collaborateurs .image {
+    height: var(--cote-image);
+    width: var(--cote-image);
+  }
+}

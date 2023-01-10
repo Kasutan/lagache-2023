@@ -1,0 +1,157 @@
+/*--------------------------------------------------------------
+## Site header
+--------------------------------------------------------------*/
+.site-header {
+	align-items: center;
+	background-color: var(--blanc);
+	display: flex;
+	justify-content: space-between;
+	padding: 10px var(--padding-x);
+	position: relative;
+	z-index:10;
+
+	.site-branding, .menu-toggle {
+		position: relative;
+	}
+
+}
+
+.title-area {
+	flex-grow:0;
+	flex-shrink:0;
+	margin-right: 30px;
+	max-width:18rem;
+	@include bp(lg) {
+		max-width: 22rem;
+	}
+	@include bp(xl) {
+		max-width: 24rem;
+	}
+}
+
+
+.site-title {
+	margin:0;
+}
+
+.custom-logo-link {
+	display: inline-block;
+}
+
+.custom-logo {
+	display: block;
+	margin:0;
+}
+
+//Header sticky toutes tailles d'écran
+.site-header.js-sticky {
+	//box-shadow: 0 3px 3px rgba(18,75,90,0.2);
+	position:fixed;
+	left: 0;
+	top: 0;
+	width:100%;
+}
+
+#wpadminbar {
+	position: fixed;
+}
+.admin-bar .site-header.js-sticky {
+	top:46px;
+}	
+
+
+@include bp(md) {
+	.site-header {
+		padding-top:0;
+	}
+
+	.admin-bar .site-header.js-sticky {
+		top:32px;
+	}
+
+	.header-navigation {
+		display: flex;
+		flex-direction: column;
+		flex-grow:1;
+		align-items: flex-end;
+	}
+}
+
+@include bp(lg) {
+	.site-header {
+		justify-content: flex-start;
+		padding-bottom:0;
+	}
+
+}
+
+
+/*--------------------------------------------------------------
+## Entry-header
+--------------------------------------------------------------*/
+.page-banniere {	
+	height:var(--hauteur-banniere);
+	overflow: hidden;
+	margin: 0 auto;
+	position: relative;	
+	max-width:var(--largeur-max);
+	width:100%;
+	img {
+		height:100%;
+		left:0;
+		position: absolute;
+		top:0;
+		width:100%;
+	}
+	--largeur-titre-banniere : 100vw;
+	--padding-titre-banniere : 20px;
+	.titre-banniere {
+		align-items: center;
+		background-color: var(--overlay);
+		display: flex;
+		height:100%;
+		padding:20px var(--padding-titre-banniere);
+		position: relative;
+		width:var(--largeur-titre-banniere);
+
+		br {
+			display: none;
+		}
+	}
+	@include bp(sm) {
+		--largeur-titre-banniere : 80vw;
+	}
+	@include bp(md) {
+		--largeur-titre-banniere : 60vw;
+		--padding-titre-banniere : 5vw;
+
+	}
+	@include bp(lg) {
+		.titre-banniere br {
+			display: block;
+		}
+		
+	}
+	@include bp(xl) {
+		--largeur-titre-banniere : 45vw;
+		
+	}
+	@include bp(xxl) {
+		--largeur-titre-banniere : calc(0.45 * var(--largeur-max));
+	}
+}
+
+//Espace sous la bannière pour la home (car cette page n'a pas de fil d'ariane)
+//Autoriser à accommoder un long titre en hauteur
+.home .page-banniere {
+	margin-bottom: 42px;
+	@include bp(md) {
+		margin-bottom: 56px;
+	}
+	@include bp(lg) {
+		margin-bottom: 74px;
+	}
+	@include bp(xl) {
+		margin-bottom: 92px;
+	}
+}

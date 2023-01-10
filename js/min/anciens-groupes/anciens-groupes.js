@@ -1,0 +1,1 @@
+!function(a){a(document).ready(function(){var e=a("#toggle-groupes");0<e.length&&a(e).click(function(e){var t=a("#anciens-groupes");a(t).slideDown("slow"),a(t).css("display","grid"),a(this).attr("aria-expanded","true"),a(t).attr("aria-expanded","true"),a(this).attr("disabled","true")})})}(jQuery);

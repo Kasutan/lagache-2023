@@ -1,0 +1,375 @@
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+:root {
+	--transition:0.45s ease-in-out;
+}
+a,
+a:visited {
+	color: var(--orange);
+	transition: all var(--transition);
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: var(--orange);
+}
+
+
+
+a:hover,
+a:focus,
+a:active {
+	outline: 0;
+}
+a:focus-visible {
+	outline: medium dotted;
+}
+
+
+/*--------------------------------------------------------------
+## Ancres
+--------------------------------------------------------------*/
+.avec-ancre {
+	position: relative;
+	.ancre {
+		left:0;
+		position:absolute;
+		top:calc(-1px * var(--header-bottom));
+	}
+}
+
+/*--------------------------------------------------------------
+## Fil d'ariane
+--------------------------------------------------------------*/
+p.fil-ariane {
+	align-items: center;
+	display:flex;
+	color:var(--gris);
+	flex-wrap: wrap;
+	@include fs(12);
+	margin-bottom:20px;
+	margin-top: 14px;
+	@include bp(lg) {
+		margin-bottom: 40px;
+	}
+	@include bp(xl) {
+		margin-bottom: 60px;
+	}
+	a {
+		color:var(--gris);
+		&:hover, &:focus {
+			text-decoration: underline;
+		}
+	}
+	.current {
+		color:var(--orange);
+	}
+	.sep {
+		display: inline-block;
+		margin:0 0.5ch;
+		position: relative;
+		top:1px;
+	}
+}
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+
+/*Logique pour afficher/masquer éléments du menu mobile et sous-menus*/ 
+
+.topbar, .nav-main, .volet-navigation {
+	display: none; // tous les menus sont cachés en mobile
+	.menu {
+		display: flex;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+	}
+}
+
+button.menu-toggle {
+	display: block;
+	svg path {
+		fill:var(--noir);
+	}
+	&:focus {
+		outline: none;
+	}
+	svg.fermer-menu { //croix pour refermer le menu
+		display:none;
+	}
+	//menu mobile ouvert
+	&[aria-expanded=true] {
+		svg.menu { //cacher hamburger 
+			display:none;
+		}
+		svg.fermer-menu { // afficher croix
+			display:block;
+		}
+	}
+}
+
+.volet-navigation.toggled { 
+	display: flex;
+	flex-direction: column;
+	left:0;
+	max-height:calc(100vh - 83px); //magic number : hauteur du header sticky
+	overflow-x:hidden;
+	overflow-y:auto;
+	padding:18px;
+	padding-right: 35px;
+	position:absolute;
+	top:100%;
+	width:100vw;
+	z-index: 10;
+}
+@include bp(md) {
+	.topbar { 
+		display:flex;
+	}
+}
+@include bp(lg) { 
+	button.menu-toggle {
+		display: none;
+	}
+	.nav-main {
+		display:flex;
+	}
+}
+
+
+/* Style pictos menu mobile */
+
+.menu-toggle {
+	background:transparent;
+	border:0;
+	margin:0;
+	min-width:unset;
+	padding:0 1rem;
+	&:hover, &:focus, &:active {
+		background:transparent;
+	}
+	svg path {
+		fill : var(--blanc);
+	}
+
+	@include bp(md) {
+		margin-right:var(--padding-x);
+	}
+}
+
+/* Style liens de menu VOLET NAVIGATION MOBILE */
+.volet-navigation {
+	background-color:var(--blanc);
+	box-shadow: 0 3px 3px rgba(0,0,0,.2);
+
+	/*Logique affichage sous-menu*/
+	.sub-menu {
+		display: none;
+		//animation JS pour ouvrir/refermer
+	}
+	.picto-angle {
+		background-color: transparent;
+		display: inline-block;
+		transition:transform var(--transition);
+	}
+
+	button.js-ouvert .picto-angle {
+		transform-origin: center;
+		transform:rotate(90deg);
+	}
+
+	
+	/*Styles communs menu et sous-menu*/
+	.menu-mobile, .sub-menu {
+		list-style: none;
+		margin: 0;
+		padding-left: 1rem;
+
+		a {
+			color:var(--noir);
+			text-decoration: none;
+		}
+	}
+	
+
+	/*Styles éléments de niveau 1*/
+	.menu-mobile > li {
+		align-items: center;
+		border-bottom:solid 1px var(--fond);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding:1rem 0;
+
+		&:last-of-type {
+			border:none;
+		}
+		> a {
+			flex:auto 0 0;
+			font-weight: 600;
+		}
+
+	}
+	button.ouvrir-sous-menu {
+		background-color: transparent;
+		min-width:unset;
+		padding:0 2rem;
+		svg path {
+			fill:var(--noir);
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+	.sub-menu {
+		flex-basis:100%;
+		flex-shrink:0;
+		padding-top: 0.5rem;
+
+		li {
+			margin-bottom: 0.8rem;
+		}
+	}
+}
+
+
+/*Style liens de menus MENU PRINCIPAL */ 
+.nav-main { 
+	align-items: center;
+
+	& , .nav-primary, .menu {
+		width:100%;
+	}
+
+	.menu {
+		justify-content: flex-start;
+		li {
+			padding:0;
+			padding-right:1rem;
+
+			@include bp(lg) {
+				padding-right:1.5rem;
+			}
+
+			&:last-of-type {
+				padding-right:0;
+			}
+		}
+
+		@include bp(xxl) {
+			justify-content: space-between;
+		}
+
+		a {
+			color:var(--noir);
+			display: block;
+			text-decoration: none;
+		}
+
+		//styles spécifiques aux liens de premier niveau
+
+		& > li {
+			& > a {
+				font-weight: 700;
+				margin-bottom: 0.7rem;
+				padding:2rem 0 1.2rem;
+				position:relative;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+			
+			&:hover > a, & > a:focus, &:focus-within > a {
+				color:var(--orange);
+			}
+			
+
+			& > a:active, &.current-menu-item > a, &.current-menu-ancestor > a {
+				color :var(--orange);
+			}
+
+			
+		}
+
+		
+
+
+		//Logique affichage sous-menu
+		.sub-menu { 
+			float: left;
+			margin-top:0px;
+			position: absolute;
+			top: 90%;
+			top: calc(100% - 0.5rem);
+			left: -999em;
+			z-index: 10;
+		}
+
+		> li { //affichage du sous-menu
+			position: relative;
+			&:hover, &.focus, &:focus-within { //classe .focus ajoutée en JS
+				.sub-menu {
+					animation: animSousMenu 0.45s cubic-bezier(0.7,0,0.3,1) both;
+					display:flex;
+					flex-direction: column;
+					left:0;
+					opacity:1;
+					max-width: 50rem;
+					min-width: 30rem;
+					max-height: 80vh;
+					overflow-y: auto;
+				}
+			}
+		}
+
+		//Style sous-menu
+		.sub-menu {
+			background-color: #fff;
+			box-shadow: 0 3px 3px rgba(18,75,90,0.2);
+			list-style:none;
+			margin:0;
+			padding:0;
+			li {
+				padding:0;
+			}
+			a {
+				@include fs(12);
+				color:var(--noir);
+				display: block;
+				line-height:1.1;
+				padding : 1.5rem;
+				transition: all var(--transition);
+				&:hover, &:focus {
+					background-color: var(--orange);
+				}
+			}
+			li.current-menu-item a {
+				background-color: var(--orange);
+			}
+		}
+	}
+
+	
+
+}
+
+
+
+
+
+/*Animations*/
+@keyframes animTrait {
+	from { 
+		width: 0; 
+	}
+}
+
+@keyframes animSousMenu {
+	from { 
+		opacity:0.4;
+		top: calc(90% + 10px); 
+	}
+}
+

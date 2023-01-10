@@ -1,0 +1,50 @@
+@import "./././sass/abstracts/variables-et-mixins";
+
+.carrousel {
+	display: none; // bloc masqué en mobile
+	@include bp(md) {
+		display: block;
+	}
+	margin-bottom: var(--margin-y-2);
+	.owl-item {
+		height:100%;
+	}
+	.logo {
+		align-items: center;
+		display: flex;
+		height:100%;
+		justify-content: center;
+		padding:1rem 2rem;
+		img {
+			//filter:grayscale(1);
+			height:10rem;
+			object-fit: contain;
+			//opacity: 0.7;
+		}
+	}
+
+	.owl-dots {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 4rem;
+		margin-top: 2rem;
+		width: 100%;
+		button {
+			background-color: lightgrey;
+			border-radius:100%;
+			height:0.9rem;
+			margin-bottom: 0;
+			margin-right: 0.5rem;
+			min-height: unset;
+			min-width: unset;
+			width:0.9rem;
+			&:last-of-type {
+				margin-right: 0;
+			}
+			&.active, &:hover, &:focus {
+				background-color: var(--orange);
+				opacity: 1;
+			}
+		}
+	}
+}

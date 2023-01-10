@@ -1,0 +1,21 @@
+.loop {
+	list-style:none;
+	margin:0;
+	padding-top:var(--margin-y-1);
+
+	.post-summary {
+		margin-bottom : var(--margin-y-1);
+	}
+
+	@include bp(lg) {
+		display: grid;
+		grid-template-columns: repeat(3,1fr);
+		gap:var(--margin-y-1);
+		margin-bottom: var(--margin-y-1);
+		.post-summary {
+			margin-bottom: 0;
+			max-width:unset;
+			width:100%;
+		}
+	}
+}

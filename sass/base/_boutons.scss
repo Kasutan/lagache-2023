@@ -1,0 +1,36 @@
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+a.bouton,
+a.wp-block-button__link {
+	@include bouton;
+ 
+	background: var(--bleu);
+	&, &:visited {
+		color: var(--fond);
+	}
+	min-width:17rem;
+	text-decoration: none;
+	transition: all var(--transition);
+
+	&:hover, &:focus, &:active {
+		background: var(--gris);
+		color: var(--fond);
+		outline: none;
+		text-decoration: none;
+	}
+	&:focus-visible {
+		outline : dashed 2px var(--gris);
+	}
+
+	&:disabled {
+		background-color: lightgrey;
+	}
+	
+}
+
+input[type="submit"] {
+	-webkit-appearance: none;
+}

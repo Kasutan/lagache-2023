@@ -1,0 +1,96 @@
+@import "./././sass/abstracts/variables-et-mixins";
+
+.carres {
+	
+	margin-bottom: var(--margin-y-1);
+
+	.liste-carres {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		
+		margin-bottom: var(--margin-y-1);
+
+	}
+
+	.carre {
+		
+		--chevrons:var(--orange);
+		--fond:var(--blanc);
+
+		
+	
+
+		@include box-shadow();
+		align-items: center;
+		background-color: var(--fond);
+		color:var(--gris);
+		display: flex;
+		flex-direction: column;
+		margin-bottom: var(--margin-y-1);
+		max-width:29.3rem;
+		min-height:26rem;
+		padding:2rem;
+		text-align: center;
+
+		.picto {
+			margin-bottom: 1rem;
+			min-height:5.7rem;
+			position: relative;
+			& > div {
+				transition: opacity var(--transition);
+			}
+			.survol {
+				left:0;
+				opacity: 0;
+				position: absolute;
+				top:0;
+			}
+		}
+
+		&:hover, &:focus {
+			--chevrons:var(--blanc);
+			--fond:var(--orange);
+
+			.picto {
+				.base {
+					opacity: 0;
+				}
+				.survol {
+					opacity: 1;
+				}
+			}
+		}
+		
+	}
+	
+
+	.titre {
+		color:var(--gris);
+		@include fs(20);
+		font-weight: 700;
+		margin-bottom: 1rem;
+		text-transform: uppercase;
+	}
+	.texte {
+		font-weight: 500;
+		margin-bottom: 1em;
+	}
+
+	.chevrons {
+		color:var(--chevrons);
+		font-weight: 700;
+		margin-top: auto;
+	}
+
+	@include bp(lg) {
+		.liste-carres {
+			column-gap: 20px;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+		}
+		.carre {
+			height: 100%;
+		}
+	}
+}

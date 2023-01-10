@@ -1,0 +1,117 @@
+
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+
+
+body {
+	margin:0; //ios 12 et 13
+	overflow-x:hidden;
+}
+:root {
+	--margin-y-1: 3rem;
+	--margin-y-2: 6rem;
+	--padding-x:20px;
+	--padding-x-decor:var(--padding-x);
+	--padding-x-pleine-largeur:0;
+	--largeur-max:1920px;
+
+	//--header-height:80px;
+	//--max-width-xl:1900px;
+
+	/*Valeurs en dur pour les navigateurs qui ne supportent pas clamp*/
+	--hauteur-banniere :400px; 
+	
+	@supports(height:clamp(560px,78vw,1083px)) {
+		--hauteur-banniere :clamp(220px,28vw,550px);
+	}
+
+
+	@include bp(lg) {
+		--padding-x : calc(50vw - 920px/2);
+	}
+	
+	@include bp(xl) {
+		--padding-x-decor: calc(50vw - 1200px/2);
+	}
+
+	@include bp(xxl) {
+		--padding-x-pleine-largeur : calc(50vw - var(--largeur-max)/2);
+	}
+}
+
+//Réglages de largeur communs à tous les templates
+.site-main {
+	.fil-ariane, .entry-title {
+		padding-left: var(--padding-x);
+		padding-right: var(--padding-x);
+	}
+}
+
+
+body .entry-content {
+	padding: 0 var(--padding-x) 1px;
+}
+
+
+.alignfull , .bleed-container {
+	@include bleed;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.container {
+	padding:0 var(--padding-x);
+}
+
+/* Hauteur mini main*/
+
+.site {
+	overflow-x: hidden;
+	position: relative;
+}
+.site-main {
+	min-height:50vh;
+}
+
+
+.show-for-md,
+.show-for-lg {
+	display: none;
+}
+
+@include bp(md) {
+
+
+	.show-for-md {
+		display: initial;
+	}
+
+	.hide-for-md {
+		display: none;
+	}
+}
+
+@include bp(lg) {
+
+
+	.show-for-lg {
+		display: initial;
+	}
+
+	.hide-for-lg {
+		display: none;
+	}
+}
+
+
+
+/* Echelle z-index 
+Elements qui ont juste besoin d'être au-dessus de leur voisin : 1
+Overlay : 5
+Sticky header : 10
+Menu mobile : 10
+Sous-menu desktop : 10;
+
+*/

@@ -1,0 +1,79 @@
+@import "./././sass/abstracts/variables-et-mixins";
+
+.collaborateurs{
+	--cote-image:29.3rem;
+	color:var(--gris);
+	margin-bottom: var(--margin-y-2);
+
+
+	.liste-administrateurs {
+		column-gap: 2rem;
+		row-gap: 3.2rem;
+		display: grid;
+		grid-template-columns: repeat(2,1fr);
+	}
+	.carte {
+		@include box-shadow();
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		margin:0 auto;
+		max-width:var(--cote-image); //Ne pas étirer photo
+		text-align: center;
+		width:100%; //remplir la colonne
+	}
+	.image {
+		width: 100%;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.infos {
+		padding:2.2rem 1rem;
+	}
+	.nom {
+		color:var(--gris);
+		font-weight: 700;
+		margin-bottom: 0;
+	}
+	.fonction {
+		@include fs(12);
+		color:var(--gris-texte);
+		font-weight: 300;
+		margin-bottom: 0;
+	}
+	.entreprise {
+		@include fs(10);
+		color:var(--gris-texte);
+		font-weight: 300;
+		font-style: italic;
+	}
+	.fonctions-lagache {
+		@include fs(12);
+	}
+
+	a {
+		margin:auto auto 1rem;
+		path {
+			transition: fill var(--transition);
+		}
+		&:focus,&:hover {
+			path {
+				fill:var(--bleu);
+			}
+		}
+	}
+	
+
+	@include bp(lg) {
+		.liste-administrateurs {
+			grid-template-columns: repeat(3,1fr);
+		}
+		.image {
+			height:var(--cote-image);
+			width:var(--cote-image);
+		}
+	}
+	
+}

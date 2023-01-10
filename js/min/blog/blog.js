@@ -1,0 +1,1 @@
+!function(e){e(document).ready(function(){var o=e(window).width(),a=e(".acf.blog .loop");o<960&&(e(a).addClass("owl-carousel"),a.owlCarousel({loop:!0,nav:!0,dots:!1,autoplay:!0,autoplayTimeout:4e3,autoplaySpeed:2e3,autoplayHoverPause:!0,items:1}))})}(jQuery);

@@ -1,0 +1,171 @@
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+
+
+.site-footer { 
+	.main-footer {
+		background-color: var(--gris);
+		color:var(--blanc);
+		@include fs(12);
+		line-height: 1.8;
+		overflow-x: auto;
+		padding:20px var(--padding-x);
+	}
+
+	@include bp(md) {
+		--largeur-col:29rem;
+		.colonnes-footer {
+			display: grid;
+			grid-template-columns: repeat(2,var(--largeur-col));
+			.col {
+				padding-right: 20px;
+			}
+			
+		}
+	}
+	@include bp(lg) {
+		--largeur-col:1fr;
+		.colonnes-footer {
+			grid-template-columns: repeat(3,var(--largeur-col));
+
+		}
+	}
+
+	.colonnes-footer p {
+		margin-bottom: 0;
+	}
+
+	a {
+		color:var(--blanc);
+		text-decoration: none;
+		&:hover, &:focus {
+			text-decoration: underline;
+		}
+		
+	}
+
+	.nav-social {
+		width:100%;
+		ul {
+			display: flex;
+			margin: 0;
+			margin-top: 1.5rem;
+			padding:0;
+			width:100%;
+
+			@include bp(lg) {
+				margin-bottom: 1.5rem;
+				margin-top: 0;
+			}
+
+			li a {
+				--size:40px;
+				background-image: url('icons/linkedin.png');
+				background-repeat: no-repeat;
+				background-size: contain;
+				color:transparent;
+				display: block;
+				flex:0 0 var(--size);
+				height:var(--size);
+				margin-right: 30px;
+				overflow: hidden;
+				width:var(--size);
+				&[href*="twitter"] {
+					background-image: url('icons/twitter.jpg');
+				}
+			}
+			li:last-of-type a {
+				margin-right: 0;
+			}
+		}
+	}
+
+	.menu > li > a, p.titre-contact {
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	.menu > li, .adresse {
+		margin-bottom: 2rem;
+	}
+
+	.titre-site, .telephone {
+		align-items: center;
+		display: flex;
+		.picto {
+			display: inline-block;
+			margin-right: 0.5ch;
+		}
+	}
+
+	.copyright {
+		background-color: var(--noir);
+		display: flex;
+		flex-direction: column;
+		padding:1.2rem var(--padding-x);
+		text-align: center;
+
+		span , a {
+			color: var(--blanc);
+			display:inline-block;
+			margin-bottom: 1rem;
+			@include fs(10);
+		}
+
+		.sep {
+			display: none;
+		}
+	}
+
+	@include bp(sm) {
+		.copyright {
+			align-items: center;
+			display:flex;
+			flex-wrap:wrap;
+			justify-content: center;
+			br {
+				display: none;
+			}
+			span.sep {
+				display: inline-block;
+				margin:0 4px;
+			}
+			span, a {
+				margin-bottom: 0;
+			}
+			
+		}
+		
+	}
+	@include bp(md) {
+		.copyright {
+			flex-direction: row;
+			flex-wrap:wrap;
+		}
+	}
+
+	@include bp(lg) {
+		
+		.menus-footer {
+			justify-content: center;
+			gap:80px;
+			a.mobile {
+				display: none;
+			}
+		}
+		.logo-footer {
+			bottom:0;
+			display: block;
+			position: absolute;
+			right:0;
+		}
+		
+	}
+
+	
+
+}
+
+

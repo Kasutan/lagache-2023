@@ -1,0 +1,84 @@
+.filtre-archive {
+	align-items: center;
+	display:flex;
+	flex-wrap:wrap;
+	margin-bottom:2rem;
+
+	label {
+		border-bottom:solid 2px transparent;
+		color:var(--bleu);
+		cursor: pointer;
+		@include fs(10);
+		font-weight: 700;
+		margin:0 1.5rem 1rem 0;
+		padding:5px 0 3px;
+		position: relative;
+		text-transform: uppercase;
+		transition: all 0.4s linear;
+		&:hover, &:focus {
+			border-color : var(--bleu);
+		}
+		
+		&.avec-pictos {
+			padding-left:20px;
+			position:relative;
+			.picto {
+				display: inline-block;
+				height:15px;
+				left:0;
+				opacity:0;
+				position:absolute;
+				transition: all 0.4s linear;
+				top:5px;
+				width:15px;
+				&.bleu {
+					opacity: 1;
+				}
+
+				img {
+					height:100%;
+					object-fit: contain;
+				}
+			}
+		}
+	}
+	input {
+		display: block;
+		appearance: auto;
+		@include screen-reader-text();
+		&:focus-visible + label {
+			&::after {
+				background-color: var(--bleu);
+				bottom:-5px;
+				content:' ';
+				display: block;
+				height:2px;
+				left:0;
+				position: absolute;
+				width:100%;
+			}
+		}
+	}
+	input:checked + label {
+		background-color: var(--bleu);
+		border-color:var(--bleu);
+		color:var(--blanc);
+		padding-left:10px;
+		padding-right:10px;
+		&.avec-pictos {
+			padding-left:30px;
+			.picto {
+				left:10px;
+				&.blanc {
+					opacity: 1;
+				}
+				&.bleu {
+					opacity: 0;
+				}
+			}
+
+		}
+	}
+
+	
+}

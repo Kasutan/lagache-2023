@@ -1,0 +1,35 @@
+.pagination {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	list-style:none;
+	padding:0 var(--padding-x);
+	margin:var(--margin-y-1) 0;
+
+	a.page {
+		border:solid 2px transparent;
+		@include fs(12);
+		color:var(--bleu);
+		font-weight: 700;
+		margin:0 0.5rem;
+		padding:1rem;
+		text-decoration: none;
+		&:hover, &:focus {
+			border-color:var(--bleu);
+		}
+	}
+
+	li.active a {
+		background-color: var(--bleu);
+		border-color:var(--bleu);
+		color:var(--blanc);
+	}
+
+	li.disabled a {
+		cursor: default;
+		&:hover, &:focus {
+			border-color:transparent;
+			color:var(--bleu);
+		}
+	}
+}

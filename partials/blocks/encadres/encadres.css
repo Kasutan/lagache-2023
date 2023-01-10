@@ -1,0 +1,35 @@
+.encadres {
+  margin-bottom: var(--margin-y-2);
+}
+.encadres .encadre {
+  background-color: var(--blanc);
+  border: solid 1px var(--orange);
+  border-radius: 10px;
+  margin-bottom: var(--margin-y-1);
+  min-height: 280px;
+  padding: 10px 25px 25px;
+}
+.encadres .picto {
+  margin-bottom: 24px;
+  max-height: 64px;
+}
+.encadres .titre {
+  font-size: calc(25 * var(--taille-texte) / 14);
+  margin-bottom: 0.5em;
+}
+.encadres .texte, .encadres .lien {
+  font-size: calc(15 * var(--taille-texte) / 14);
+}
+.encadres .lien {
+  text-decoration: underline;
+}
+@media (min-width: 960px) {
+  .encadres .liste-encadres {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--margin-y-1);
+  }
+  .encadres .encadre {
+    margin-bottom: 0;
+  }
+}

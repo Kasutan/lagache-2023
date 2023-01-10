@@ -1,0 +1,15 @@
+.site-inner {
+
+	&, .content-area {
+		position: relative;
+	}
+	
+	.image-fond {
+		left:0;
+		position:absolute;
+		top:0;
+		top:var(--hauteur-banniere);
+		width:100%;
+	}
+
+}

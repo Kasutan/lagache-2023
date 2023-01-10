@@ -1,0 +1,250 @@
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+.entry-content ul:not([class]) {
+	li {
+		margin-bottom: 1em;
+		&::before {
+			content: '■';
+			color:var(--orange);
+			display: inline-block;
+			margin-right: 4px;
+		}
+	}
+}
+/*
+ul:not([class]),
+ol:not([class]) {
+	margin: 0 0 1.5em 0;
+	padding-left:1em;
+}
+
+ul:not([class])  {
+	list-style: none;
+	padding-left:1em;
+	> li::before {
+		content: '•'; 
+		color: var(--bleu);
+		display: inline-block; 
+		width: 1em;
+		margin-left: -1em		
+	}
+}
+
+ol {
+	list-style: decimal;
+}
+
+li>ul,
+li>ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}*/
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
+
+	&.emoji {
+		width: 2ch;
+		display: inline-block;
+		position: relative;
+		top: 3px;
+	}
+}
+
+figure {
+	margin: 1em 0;
+	/* Extra wide images within figure tags don't overflow the content area. */
+	figcaption {
+		text-align: center;
+	}
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	background-color: var(--fond);
+	color: var(--gris);
+	border: 1px solid var(--orange);
+	outline-color:var(--orange);
+	min-height:4.1rem;
+	padding: 3px;
+	
+	&:focus {
+		outline:solid 1px;
+		outline-color:var(--orange);
+	}
+}
+
+
+select {
+	border: 1px solid var(--bordure);
+}
+
+textarea {
+	width: 100%;
+}
+
+.wpcf7-form {
+	margin-bottom: var(--margin-y-2);
+	label, .checkbox {
+		display: block;
+		margin-bottom: 2rem;
+		label {
+			margin-bottom: 0;
+		}
+	}
+	input[type="text"],
+	input[type="email"],
+	textarea {
+		display: block;
+		margin-top: 3px;
+		width:100%;
+	}
+
+	small {
+		color:#828282;
+		@include fs(10);
+		font-weight: 300;
+	}
+
+	.wpcf7-spinner {
+		margin-right: 0;
+	}
+	.spinner-spacer {
+		width:48px;
+	}
+
+	@include bp(md) {
+		.row {
+			column-gap:3rem;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	//custom checkboxes
+	//https://moderncss.dev/pure-css-custom-checkbox-style/
+	
+	input[type="checkbox"] {
+		appearance: none;
+		background-color: var(--fond);
+		display: inline-grid;
+		place-content: center;
+		margin: 0;
+		font: inherit;
+		color: currentColor;
+		width: 1.5rem;
+		height: 1.5rem;
+		border: 1px solid var(--orange);
+		border-radius: 0;
+		transform:translateY(-2px);
+
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 0.65em;
+			height: 0.65em;
+			transform: scale(0);
+			transition: 120ms transform ease-in-out;
+			box-shadow: inset 1em 1em var(--orange);
+		}
+
+		&:checked::before {
+			transform: scale(1);
+		}
+	}
+	
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+

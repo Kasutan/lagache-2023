@@ -1,0 +1,80 @@
+@import "./././sass/abstracts/variables-et-mixins";
+
+.blog {
+	margin:40px 0;
+	.titre-section {
+		@include fs(30);
+		margin-bottom: 0;
+	}
+
+	//Carrousel en mobile
+	.owl-carousel {
+		.owl-item .entry-date img {
+			width:22px;
+		}
+		.owl-item {
+			padding:0 2.8rem;
+		}
+	}
+
+	//Si on redimensionne l'écran sans rafraichir la page, le carrousel reste actif même en écran large -> limiter la taille des slides
+	.post-summary {
+		margin: 0 auto var(--margin-y-1);
+		max-width: 46rem;
+	}
+
+	//masquer picto catégorie
+	.picto-cat {
+		display: none;
+	}
+
+	.owl-nav {
+		--size:4rem;
+		--marge:1.5rem;
+
+		
+		
+		display: flex;
+		justify-content: space-between;
+		left:0;
+		position:absolute;
+		top:50%;
+		width:100%;
+
+		@include bp(md) {
+			--marge:0;
+		}
+
+		button {
+			background-color:transparent;
+			border:none;
+			margin:0px;
+			min-width:unset;
+			padding:0;
+			position:relative;
+
+			
+			span {
+				background-image:url('angle.svg');
+				background-size:contain;
+				background-repeat: no-repeat;
+				background-position: center;
+				color:transparent;
+				display: block;
+				height:var(--size);
+				width:var(--size);
+			}
+			&.owl-prev {
+				left:calc(-1 * var(--marge));
+				transform:rotateZ(180deg);
+			}
+			&.owl-next {
+				left:var(--marge);
+				
+			}
+		}
+
+
+	}
+
+} 

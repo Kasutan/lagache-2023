@@ -1,0 +1,21 @@
+.intro-accueil {
+	max-width:850px;
+	margin:var(--margin-y-2) auto;
+	position: relative;
+	text-align: center;
+}
+
+.home .entry-content {
+	//changer ordre des sections en mobile
+
+	@media screen and (max-width:767px) {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 0;
+		section.chiffres {
+			order:1;
+			margin-bottom: 0;
+		}
+	}
+
+}

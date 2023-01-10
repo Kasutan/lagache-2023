@@ -1,0 +1,93 @@
+$colors: ( 
+	'blanc':#fff, 
+	'vert' : #3A7C32, //hsl(113.5,42.5%,34.1%)  rgba(58,124,50,1)
+	'rouge' : #C03419, //hsl(9.7,77%,42.5%)  rgba(192,52,25,1)
+	'orange' :#DF9240, 
+	'overlay' : rgba(192,52,25,0.9), 
+	'gris' : rgba(0,0,0,0.6),
+	'texte' : rgba(0,0,0,0.9),
+	'noir' : #000000
+);
+
+
+
+// Breakpoints
+@mixin bp($point) {
+	$sm: "(min-width: 500px)";
+	$md: "(min-width: 768px)";
+	$lg: "(min-width: 960px)";
+	$xl: "(min-width: 1440px)";
+	$xxl: "(min-width: 1920px)";
+  
+	@if $point == sm {
+	@media #{$sm} { @content; }
+	}
+	@else if $point == md {
+	@media #{$md} { @content; }
+	}
+
+	@else if $point == lg {
+	@media #{$lg} { @content; }
+	}
+  
+	@else if $point == xl {
+	@media #{$xl} { @content; }
+	}
+
+	@else if $point == xxl {
+		@media #{$xxl} { @content; }
+		}
+}
+
+@mixin fs($px) {
+	font-size:calc(#{$px} * var(--taille-texte) / 15);
+}
+
+@mixin box-shadow {
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@mixin bleed {
+	width: 100vw;
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
+
+
+@mixin bouton {
+	@include fs(12);
+	font-weight: 600;
+	border: none;
+	border-radius: 0;
+	cursor: pointer;
+	display:inline-block;
+	margin-bottom: 1em;
+	padding: 0.5rem 1.2rem;
+	text-align: center;
+	vertical-align: middle;
+}
+
+@mixin screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+	/* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+@mixin placeholder {
+	color:#727272;
+	opacity:1;
+}
+
+@mixin object-fit {
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
+}

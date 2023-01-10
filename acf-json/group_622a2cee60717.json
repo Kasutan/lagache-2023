@@ -1,0 +1,69 @@
+{
+    "key": "group_622a2cee60717",
+    "title": "Bloc 3 carrés avec pictos",
+    "fields": [
+        {
+            "key": "field_622a2d994e1a2",
+            "label": "Titre de la section (pour lecteurs d'écran et SEO uniquement)",
+            "name": "titre_section",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Nos sujets",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_622b6ed6bb97c",
+            "label": "Carrés",
+            "name": "carres",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Les couleurs sont appliquées automatiquement (carrés 1 et 3 : fond blanc, carré 2 : fond orange)",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "pagination": 0,
+            "min": 1,
+            "max": 3,
+            "collapsed": "",
+            "button_label": "Ajouter un carré",
+            "rows_per_page": 20,
+            "sub_fields": []
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/carres"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1673345653,
+    "local_file": "C:UsersMagalieLocal Siteslagacheapppublic\/wp-content\/themes\/lagache-2023\/acf-json\/group_622a2cee60717.json"
+}

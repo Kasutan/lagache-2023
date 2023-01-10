@@ -1,0 +1,31 @@
+form.search-form {
+	align-items:stretch;
+	display: flex;
+	max-width:50rem;
+	label {
+		flex-grow:1;
+	}
+	input.search-field {
+		height: 42px;
+		width:100%
+	}
+	input.search-submit {
+		margin-bottom: 0;
+		min-width: unset;
+	}
+}
+
+.search-results {
+	li.product {
+		margin-bottom: var(--margin-y-2);
+		text-align: left;
+	}
+}
+
+.no-results{
+	min-height:50vh;
+	.entry-title {
+		color:var(--orange);
+		padding-top:var(--margin-y-1);	
+	}
+}

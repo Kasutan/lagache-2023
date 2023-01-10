@@ -1,0 +1,60 @@
+.blog {
+  margin: 40px 0;
+}
+.blog .titre-section {
+  font-size: calc(30 * var(--taille-texte) / 14);
+  margin-bottom: 0;
+}
+.blog .owl-carousel .owl-item .entry-date img {
+  width: 22px;
+}
+.blog .owl-carousel .owl-item {
+  padding: 0 2.8rem;
+}
+.blog .post-summary {
+  margin: 0 auto var(--margin-y-1);
+  max-width: 46rem;
+}
+.blog .picto-cat {
+  display: none;
+}
+.blog .owl-nav {
+  --size:4rem;
+  --marge:1.5rem;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .blog .owl-nav {
+    --marge:0;
+  }
+}
+.blog .owl-nav button {
+  background-color: transparent;
+  border: none;
+  margin: 0px;
+  min-width: unset;
+  padding: 0;
+  position: relative;
+}
+.blog .owl-nav button span {
+  background-image: url("angle.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: transparent;
+  display: block;
+  height: var(--size);
+  width: var(--size);
+}
+.blog .owl-nav button.owl-prev {
+  left: calc(-1 * var(--marge));
+  transform: rotateZ(180deg);
+}
+.blog .owl-nav button.owl-next {
+  left: var(--marge);
+}

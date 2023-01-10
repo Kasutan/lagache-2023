@@ -1,0 +1,76 @@
+.wp-block-group {
+	&.alignfull {
+		--wp--style--block-gap:0;
+
+		.wp-block-image, .wp-block-columns > .wp-block-column {
+			margin:0;
+		}
+		.wp-block-column > .wp-block-image {
+			height:100%;
+			img {
+				height: 100%;
+				width:100%;
+			}
+		}
+
+		.wp-block-columns {
+			margin-bottom: 0;
+		}
+	}
+
+	&.bloc-bleu {
+		background-color: var(--bleu);
+		padding:3rem;
+		p, h3, h4 {
+			color:var(--blanc);
+		}
+
+		//En mobile : pleine largeur et compenser margin-bottom du bloc colonnes + padding-bottom 1px de entry-content
+		@media screen and (max-width:781px) {
+			@include bleed();
+			margin-bottom: -1.8em;
+		}
+	}
+}
+
+.wp-block-columns {
+	&.alignfull {
+		margin-bottom: 0;
+		padding:var(--margin-y-2) var(--padding-x);
+	}
+
+	a.wp-block-button__link {
+		min-width:10rem;
+	}
+
+	
+}
+.wp-block-column {
+	&.gap-fallback {
+		padding-left:2em;
+		@supports(font-size:clamp(1em,10vw,10em)) { // hack pour exclure safari 12
+			padding-left: 0;
+		}
+	}
+	
+}
+
+
+.wp-block-image {
+	
+	
+	&.alignwide {
+		@include bleed;
+		padding:0 var(--padding-x);
+		figcaption {
+			text-align: right;
+		}
+	}
+}
+
+.wp-block-code {
+	background-color: lightgrey;
+	margin-bottom: var(--margin-y-2);
+	padding:2rem;
+	font-style: italic;
+}
