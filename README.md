@@ -1,2 +1,3 @@
-# kasutan-2020
-Nouveau thème pour My Big Bang (refonte juin 2020)
+# lagache-2023
+Thème sur-mesure pour la refonte du site Lagache
+Utilise list.js, owl carrousel et blocs Gutemberg avec ACF
