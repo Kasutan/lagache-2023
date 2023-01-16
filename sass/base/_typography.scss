@@ -67,12 +67,12 @@ textarea {
 	font-size: 1.4rem; //si les variables css ne sont pas supportées
 	font-size: var(--taille-texte);
 	font-weight: 400;
-	line-height: 1.5;
+	line-height: 1.75;
 	-webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-	background: var(--bleu);
+	background: var(--vert);
 	color: var(--blanc);
 }
 
@@ -95,6 +95,7 @@ h4,
 .h2,
 .h3,
 .h4 {
+	color:var(--vert);
 	font-family: var(--font-titre);
 	font-weight: 700;
 	padding: 0;
@@ -102,18 +103,30 @@ h4,
 
 h1,
 .h1 {
-	color:var(--blanc);
-	@include fs(30);
-	margin: 0;
 
-	@include bp(md) {
-		@include fs(36);
+	@include fs(35);
+	line-height: 1.2;
+	margin: 1em 0 0.5em;
+	position: relative;
+	text-decoration: underline;
+	text-underline-offset:5px;
+	&::before {
+		background-image: url('icons/picto-fruit-vert.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		content:'';
+		display: inline-block;
+		height:4rem;
+		margin-right: 8px;
+		position: relative;
+		top:8px;
+		width: 3.6rem;
 	}
-	@include bp(lg) {
-		@include fs(42);
+	&.has-rouge-color::before {
+		background-image: url('icons/picto-fruit-rouge.png');
 	}
-	@include bp(xl) {
-		@include fs(48);
+	&.has-blanc-color::before {
+		background-image: url('icons/picto-fruit-blanc.png');
 	}
 }
 
