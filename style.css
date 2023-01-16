@@ -655,11 +655,11 @@ input,
 select,
 optgroup,
 textarea {
-  color: rgba(0, 0, 0, 0.6);
-  color: var(--gris);
-  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgba(0, 0, 0, 0.9);
+  color: var(--texte);
+  font-family: "Kantumruy Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: var(--font-texte);
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-size: var(--taille-texte);
   font-weight: 400;
   line-height: 1.75;
@@ -689,7 +689,6 @@ h4,
 .h2,
 .h3,
 .h4 {
-  color: var(--vert);
   font-family: var(--font-titre);
   font-weight: 700;
   padding: 0;
@@ -697,6 +696,7 @@ h4,
 
 h1,
 .h1 {
+  color: var(--vert);
   font-size: calc(35 * var(--taille-texte) / 15);
   line-height: 1.2;
   margin: 1em 0 0.5em;
@@ -730,8 +730,8 @@ h2,
 h3,
 .h2,
 .h3 {
-  color: var(--orange);
-  margin: 0 0 1em;
+  color: var(--rouge);
+  margin: 0 0 0.5em;
 }
 
 h2,
@@ -741,8 +741,7 @@ h2,
 
 h3,
 .h3 {
-  font-size: calc(14 * var(--taille-texte) / 15);
-  font-weight: 600;
+  font-size: calc(20 * var(--taille-texte) / 15);
 }
 
 h4,
@@ -751,21 +750,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  color: var(--noir);
-  font-size: calc(14 * var(--taille-texte) / 15);
-  font-weight: 500;
-}
-
-h4,
-.h4 {
-  margin-bottom: 3px;
-}
-h4::before,
-.h4::before {
-  content: "■";
-  display: inline-block;
-  font-size: 80%;
-  margin-right: 4px;
+  color: var(--texte);
 }
 
 p {
@@ -802,16 +787,16 @@ small,
 }
 
 .has-regular-font-size {
-  font-size: calc(14 * var(--taille-texte) / 15);
+  font-size: calc(15 * var(--taille-texte) / 15);
 }
 
 big,
 .has-big-font-size {
-  font-size: calc(24 * var(--taille-texte) / 15);
+  font-size: calc(25 * var(--taille-texte) / 15);
 }
 
 .has-huge-font-size {
-  font-size: calc(48 * var(--taille-texte) / 15);
+  font-size: calc(35 * var(--taille-texte) / 15);
 }
 
 /*--------------------------------------------------------------

@@ -124,17 +124,17 @@ if ( ! function_exists( 'kasutan_setup' ) ) :
 			),
 			array(
 				'name' => __( 'Normale', 'lagache' ),
-				'size' => 14,
+				'size' => 15,
 				'slug' => 'normal'
 			),
 			array(
 				'name' => __( 'Grande', 'lagache' ),
-				'size' => 24,
+				'size' => 25,
 				'slug' => 'big'
 			),
 			array(
 				'name' => __( 'Très grande', 'lagache' ),
-				'size' => 48,
+				'size' => 35,
 				'slug' => 'huge'
 			)
 		) );
