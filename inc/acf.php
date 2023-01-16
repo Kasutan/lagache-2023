@@ -114,7 +114,7 @@ class BE_ACF_Customizations {
 				'menu_slug' 	=> 'site-settings',
 				'capability'	=> 'edit_posts',
 				'position' 		=> '2.5',
-				'icon_url' 		=> 'dashicons-cloud',
+				'icon_url' 		=> 'dashicons-carrot',
 				'redirect'		=> false,
 				'update_button' => 'Mettre à jour',
 				'updated_message' => 'Réglages du site mis à jour',
@@ -134,14 +134,14 @@ class BE_ACF_Customizations {
 				array(
 					'slug' => 'lagache',
 					'title' => 'Lagache',
-					'icon'  => 'cloud',
+					'icon'  => 'carrot',
 				),
 			),
 			$categories
 		);
 	}
 
-	function helper_register_block_type($slug,$titre,$description,$icon='cloud',$js=false,$keywords=[], $multiple=true ){
+	function helper_register_block_type($slug,$titre,$description,$icon='carrot',$js=false,$keywords=[], $multiple=true ){
 		$keywords_from_slug=explode('-',$slug);
 		$keywords=array_merge($keywords,$keywords_from_slug, array('Lagache'));
 		$args=[
@@ -198,19 +198,19 @@ class BE_ACF_Customizations {
 			'carres',
 			'Bloc 3 carrés avec pictos',
 			'Section avec 3 carrés avec pictos pour la page d\'accueil.',
-			'cloud', 
+			'carrot', 
 			false,
 			array('carré', 'carre', 'accueil')
 		);
 
 		/*********Bloc chiffres ***************/
 		$this->helper_register_block_type( 
-			'chiffres',
-			'Bloc bannière chiffres',
-			'Section avec une image de fond et 5 chiffres pour la page d\'accueil.',
-			'cloud', 
+			'banniere',
+			'Bloc image bannière',
+			'Section avec une image de fond et un texte sur fond coloré semi-opaque la page d\'accueil.',
+			'carrot', 
 			false,
-			array('chiffre', 'banniere', 'accueil')
+			array( 'banniere', 'accueil')
 		);
 
 		/*********Bloc administrateur ***************/
@@ -218,7 +218,7 @@ class BE_ACF_Customizations {
 			'administrateurs',
 			'Bloc administrateurs',
 			'Section avec composition du conseil d\'administration - une carte par personne. Les informations pour chaque personne sont à renseigner dans le menu pilotes',
-			'cloud', 
+			'carrot', 
 			false,
 			array('pilote', 'conseil', 'administration','administrateur')
 		);
@@ -228,7 +228,7 @@ class BE_ACF_Customizations {
 			'groupes',
 			'Bloc groupes de travail',
 			'Section avec titre, introduction et listes cliquables de groupes de travail regroupées en collèges.',
-			'cloud', 
+			'carrot', 
 			false,
 			array('college', 'collège'),
 			false //un seul bloc par page à cause de l'ID
@@ -239,7 +239,7 @@ class BE_ACF_Customizations {
 			'anciens-groupes',
 			'Bloc anciens groupes de travail (escamotable)',
 			'Section avec titre, introduction et listes cliquables de groupes de travail regroupées en collèges. Option pour afficher un bouton et rendre cette section escamotable',
-			'cloud', 
+			'carrot', 
 			true, //besoin de JS pour la version escamotable
 			array('college', 'collège'),
 			false //un seul bloc par page à cause de l'ID
@@ -250,7 +250,7 @@ class BE_ACF_Customizations {
 			'carrousel',
 			'Bloc carrousel de logos des membres',
 			'Section avec titre et carrousel de logos des membres, présentés dans un ordre aléatoire',
-			'cloud', 
+			'carrot', 
 			true, //besoin de JS pour le carrousel
 			array('logo', 'membre')
 		);
@@ -260,7 +260,7 @@ class BE_ACF_Customizations {
 			'intro',
 			'Bloc introduction',
 			'Section avec titre, sous-titre, texte, image ou vidéo et décor nuage en desktop.',
-			'cloud', 
+			'carrot', 
 			false,
 			array('introduction', 'decor')
 		);
@@ -270,7 +270,7 @@ class BE_ACF_Customizations {
 			'membres',
 			'Bloc table des membres',
 			'Section avec table des membres et bouton pour télécharger la liste au format PDF.',
-			'cloud', 
+			'carrot', 
 			false,
 			array('table','membre')
 		);
@@ -280,7 +280,7 @@ class BE_ACF_Customizations {
 			'ecosysteme',
 			'Bloc table de l\'écosysteme',
 			'Section avec table des organisations de l\'écosysteme et bouton pour télécharger la liste au format PDF.',
-			'cloud', 
+			'carrot', 
 			false,
 			array('table','organisation','ecosysteme')
 		);
