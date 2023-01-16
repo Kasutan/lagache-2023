@@ -112,8 +112,12 @@
 		padding:1rem;
 		position: absolute;
 		right:var(--padding-x-header);
+		text-decoration: none;
 		text-transform:uppercase;
 		top:0;
+		&:hover, &:focus {
+			text-decoration: underline;
+		}
 	}
 
 }

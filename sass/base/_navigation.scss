@@ -6,7 +6,9 @@
 }
 a,
 a:visited {
-	color: var(--orange);
+	color: var(--rouge);
+	font-weight: 600;
+	text-decoration: underline;
 	transition: all var(--transition);
 }
 
@@ -14,6 +16,7 @@ a:hover,
 a:active,
 a:focus {
 	color: var(--orange);
+	text-decoration: underline;
 }
 
 

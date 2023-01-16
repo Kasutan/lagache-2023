@@ -1182,7 +1182,9 @@ object {
 
 a,
 a:visited {
-  color: var(--orange);
+  color: var(--rouge);
+  font-weight: 600;
+  text-decoration: underline;
   transition: all var(--transition);
 }
 
@@ -1190,6 +1192,7 @@ a:hover,
 a:active,
 a:focus {
   color: var(--orange);
+  text-decoration: underline;
 }
 
 a:hover,
@@ -1738,8 +1741,12 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
     padding: 1rem;
     position: absolute;
     right: var(--padding-x-header);
+    text-decoration: none;
     text-transform: uppercase;
     top: 0;
+  }
+  a.acces-client:hover, a.acces-client:focus {
+    text-decoration: underline;
   }
 }
 /*--------------------------------------------------------------
