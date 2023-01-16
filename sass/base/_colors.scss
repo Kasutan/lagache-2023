@@ -17,20 +17,18 @@
 	.has-#{$name}-background-color {
 		background-color: $color;
 	}
-	a.wp-block-button__link.has-#{$name}-background-color {
-		background-color: $color;
-		&:focus, &:hover {
+	a.wp-block-button__link {
+		&.has-#{$name}-background-color {
 			background-color: $color;
-			filter:brightness(0.8);
+			&:focus-visible {
+				outline-color: $color;
+			}
+		}
+		&.has-#{$name}-color {
+			color:$color;
+			&:visited,&:hover, &:focus, &:active {
+				color:$color;
+			}
 		}
 	}
-
-	.wp-block-button.is-style-outline a.wp-block-button__link.has-#{$name}-color {
-		border-color: $color;
-		color: $color;
-		&:focus, &:hover {
-			filter:brightness(0.8);
-		}
-	}
-
 }

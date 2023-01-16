@@ -21,17 +21,14 @@
 a.wp-block-button__link.has-blanc-background-color {
   background-color: #fff;
 }
-a.wp-block-button__link.has-blanc-background-color:focus, a.wp-block-button__link.has-blanc-background-color:hover {
-  background-color: #fff;
-  filter: brightness(0.8);
+a.wp-block-button__link.has-blanc-background-color:focus-visible {
+  outline-color: #fff;
 }
-
-.wp-block-button.is-style-outline a.wp-block-button__link.has-blanc-color {
-  border-color: #fff;
+a.wp-block-button__link.has-blanc-color {
   color: #fff;
 }
-.wp-block-button.is-style-outline a.wp-block-button__link.has-blanc-color:focus, .wp-block-button.is-style-outline a.wp-block-button__link.has-blanc-color:hover {
-  filter: brightness(0.8);
+a.wp-block-button__link.has-blanc-color:visited, a.wp-block-button__link.has-blanc-color:hover, a.wp-block-button__link.has-blanc-color:focus, a.wp-block-button__link.has-blanc-color:active {
+  color: #fff;
 }
 
 .has-vert-color {
@@ -45,17 +42,14 @@ a.wp-block-button__link.has-blanc-background-color:focus, a.wp-block-button__lin
 a.wp-block-button__link.has-vert-background-color {
   background-color: #3A7C32;
 }
-a.wp-block-button__link.has-vert-background-color:focus, a.wp-block-button__link.has-vert-background-color:hover {
-  background-color: #3A7C32;
-  filter: brightness(0.8);
+a.wp-block-button__link.has-vert-background-color:focus-visible {
+  outline-color: #3A7C32;
 }
-
-.wp-block-button.is-style-outline a.wp-block-button__link.has-vert-color {
-  border-color: #3A7C32;
+a.wp-block-button__link.has-vert-color {
   color: #3A7C32;
 }
-.wp-block-button.is-style-outline a.wp-block-button__link.has-vert-color:focus, .wp-block-button.is-style-outline a.wp-block-button__link.has-vert-color:hover {
-  filter: brightness(0.8);
+a.wp-block-button__link.has-vert-color:visited, a.wp-block-button__link.has-vert-color:hover, a.wp-block-button__link.has-vert-color:focus, a.wp-block-button__link.has-vert-color:active {
+  color: #3A7C32;
 }
 
 .has-rouge-color {
@@ -69,17 +63,14 @@ a.wp-block-button__link.has-vert-background-color:focus, a.wp-block-button__link
 a.wp-block-button__link.has-rouge-background-color {
   background-color: #C03419;
 }
-a.wp-block-button__link.has-rouge-background-color:focus, a.wp-block-button__link.has-rouge-background-color:hover {
-  background-color: #C03419;
-  filter: brightness(0.8);
+a.wp-block-button__link.has-rouge-background-color:focus-visible {
+  outline-color: #C03419;
 }
-
-.wp-block-button.is-style-outline a.wp-block-button__link.has-rouge-color {
-  border-color: #C03419;
+a.wp-block-button__link.has-rouge-color {
   color: #C03419;
 }
-.wp-block-button.is-style-outline a.wp-block-button__link.has-rouge-color:focus, .wp-block-button.is-style-outline a.wp-block-button__link.has-rouge-color:hover {
-  filter: brightness(0.8);
+a.wp-block-button__link.has-rouge-color:visited, a.wp-block-button__link.has-rouge-color:hover, a.wp-block-button__link.has-rouge-color:focus, a.wp-block-button__link.has-rouge-color:active {
+  color: #C03419;
 }
 
 .has-orange-color {
@@ -93,17 +84,14 @@ a.wp-block-button__link.has-rouge-background-color:focus, a.wp-block-button__lin
 a.wp-block-button__link.has-orange-background-color {
   background-color: #DF9240;
 }
-a.wp-block-button__link.has-orange-background-color:focus, a.wp-block-button__link.has-orange-background-color:hover {
-  background-color: #DF9240;
-  filter: brightness(0.8);
+a.wp-block-button__link.has-orange-background-color:focus-visible {
+  outline-color: #DF9240;
 }
-
-.wp-block-button.is-style-outline a.wp-block-button__link.has-orange-color {
-  border-color: #DF9240;
+a.wp-block-button__link.has-orange-color {
   color: #DF9240;
 }
-.wp-block-button.is-style-outline a.wp-block-button__link.has-orange-color:focus, .wp-block-button.is-style-outline a.wp-block-button__link.has-orange-color:hover {
-  filter: brightness(0.8);
+a.wp-block-button__link.has-orange-color:visited, a.wp-block-button__link.has-orange-color:hover, a.wp-block-button__link.has-orange-color:focus, a.wp-block-button__link.has-orange-color:active {
+  color: #DF9240;
 }
 
 .has-overlay-color {
@@ -117,17 +105,14 @@ a.wp-block-button__link.has-orange-background-color:focus, a.wp-block-button__li
 a.wp-block-button__link.has-overlay-background-color {
   background-color: rgba(192, 52, 25, 0.9);
 }
-a.wp-block-button__link.has-overlay-background-color:focus, a.wp-block-button__link.has-overlay-background-color:hover {
-  background-color: rgba(192, 52, 25, 0.9);
-  filter: brightness(0.8);
+a.wp-block-button__link.has-overlay-background-color:focus-visible {
+  outline-color: rgba(192, 52, 25, 0.9);
 }
-
-.wp-block-button.is-style-outline a.wp-block-button__link.has-overlay-color {
-  border-color: rgba(192, 52, 25, 0.9);
+a.wp-block-button__link.has-overlay-color {
   color: rgba(192, 52, 25, 0.9);
 }
-.wp-block-button.is-style-outline a.wp-block-button__link.has-overlay-color:focus, .wp-block-button.is-style-outline a.wp-block-button__link.has-overlay-color:hover {
-  filter: brightness(0.8);
+a.wp-block-button__link.has-overlay-color:visited, a.wp-block-button__link.has-overlay-color:hover, a.wp-block-button__link.has-overlay-color:focus, a.wp-block-button__link.has-overlay-color:active {
+  color: rgba(192, 52, 25, 0.9);
 }
 
 .has-gris-color {
@@ -141,17 +126,14 @@ a.wp-block-button__link.has-overlay-background-color:focus, a.wp-block-button__l
 a.wp-block-button__link.has-gris-background-color {
   background-color: rgba(0, 0, 0, 0.6);
 }
-a.wp-block-button__link.has-gris-background-color:focus, a.wp-block-button__link.has-gris-background-color:hover {
-  background-color: rgba(0, 0, 0, 0.6);
-  filter: brightness(0.8);
+a.wp-block-button__link.has-gris-background-color:focus-visible {
+  outline-color: rgba(0, 0, 0, 0.6);
 }
-
-.wp-block-button.is-style-outline a.wp-block-button__link.has-gris-color {
-  border-color: rgba(0, 0, 0, 0.6);
+a.wp-block-button__link.has-gris-color {
   color: rgba(0, 0, 0, 0.6);
 }
-.wp-block-button.is-style-outline a.wp-block-button__link.has-gris-color:focus, .wp-block-button.is-style-outline a.wp-block-button__link.has-gris-color:hover {
-  filter: brightness(0.8);
+a.wp-block-button__link.has-gris-color:visited, a.wp-block-button__link.has-gris-color:hover, a.wp-block-button__link.has-gris-color:focus, a.wp-block-button__link.has-gris-color:active {
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .has-texte-color {
@@ -165,17 +147,14 @@ a.wp-block-button__link.has-gris-background-color:focus, a.wp-block-button__link
 a.wp-block-button__link.has-texte-background-color {
   background-color: rgba(0, 0, 0, 0.9);
 }
-a.wp-block-button__link.has-texte-background-color:focus, a.wp-block-button__link.has-texte-background-color:hover {
-  background-color: rgba(0, 0, 0, 0.9);
-  filter: brightness(0.8);
+a.wp-block-button__link.has-texte-background-color:focus-visible {
+  outline-color: rgba(0, 0, 0, 0.9);
 }
-
-.wp-block-button.is-style-outline a.wp-block-button__link.has-texte-color {
-  border-color: rgba(0, 0, 0, 0.9);
+a.wp-block-button__link.has-texte-color {
   color: rgba(0, 0, 0, 0.9);
 }
-.wp-block-button.is-style-outline a.wp-block-button__link.has-texte-color:focus, .wp-block-button.is-style-outline a.wp-block-button__link.has-texte-color:hover {
-  filter: brightness(0.8);
+a.wp-block-button__link.has-texte-color:visited, a.wp-block-button__link.has-texte-color:hover, a.wp-block-button__link.has-texte-color:focus, a.wp-block-button__link.has-texte-color:active {
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .has-bordure-color {
@@ -189,17 +168,14 @@ a.wp-block-button__link.has-texte-background-color:focus, a.wp-block-button__lin
 a.wp-block-button__link.has-bordure-background-color {
   background-color: rgba(0, 0, 0, 0.4);
 }
-a.wp-block-button__link.has-bordure-background-color:focus, a.wp-block-button__link.has-bordure-background-color:hover {
-  background-color: rgba(0, 0, 0, 0.4);
-  filter: brightness(0.8);
+a.wp-block-button__link.has-bordure-background-color:focus-visible {
+  outline-color: rgba(0, 0, 0, 0.4);
 }
-
-.wp-block-button.is-style-outline a.wp-block-button__link.has-bordure-color {
-  border-color: rgba(0, 0, 0, 0.4);
+a.wp-block-button__link.has-bordure-color {
   color: rgba(0, 0, 0, 0.4);
 }
-.wp-block-button.is-style-outline a.wp-block-button__link.has-bordure-color:focus, .wp-block-button.is-style-outline a.wp-block-button__link.has-bordure-color:hover {
-  filter: brightness(0.8);
+a.wp-block-button__link.has-bordure-color:visited, a.wp-block-button__link.has-bordure-color:hover, a.wp-block-button__link.has-bordure-color:focus, a.wp-block-button__link.has-bordure-color:active {
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .has-noir-color {
@@ -213,54 +189,264 @@ a.wp-block-button__link.has-bordure-background-color:focus, a.wp-block-button__l
 a.wp-block-button__link.has-noir-background-color {
   background-color: #000000;
 }
-a.wp-block-button__link.has-noir-background-color:focus, a.wp-block-button__link.has-noir-background-color:hover {
-  background-color: #000000;
-  filter: brightness(0.8);
+a.wp-block-button__link.has-noir-background-color:focus-visible {
+  outline-color: #000000;
 }
-
-.wp-block-button.is-style-outline a.wp-block-button__link.has-noir-color {
-  border-color: #000000;
+a.wp-block-button__link.has-noir-color {
   color: #000000;
 }
-.wp-block-button.is-style-outline a.wp-block-button__link.has-noir-color:focus, .wp-block-button.is-style-outline a.wp-block-button__link.has-noir-color:hover {
-  filter: brightness(0.8);
+a.wp-block-button__link.has-noir-color:visited, a.wp-block-button__link.has-noir-color:hover, a.wp-block-button__link.has-noir-color:focus, a.wp-block-button__link.has-noir-color:active {
+  color: #000000;
 }
 
+/* kantumruy-pro-regular - latin */
+@font-face {
+  font-family: "Kantumruy Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("fonts/kantumruy-pro-v3-latin-regular.woff2") format("woff2"), url("fonts/kantumruy-pro-v3-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* kantumruy-pro-500 - latin */
+@font-face {
+  font-family: "Kantumruy Pro";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("fonts/kantumruy-pro-v3-latin-500.woff2") format("woff2"), url("fonts/kantumruy-pro-v3-latin-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* kantumruy-pro-600 - latin */
+@font-face {
+  font-family: "Kantumruy Pro";
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("fonts/kantumruy-pro-v3-latin-600.woff2") format("woff2"), url("fonts/kantumruy-pro-v3-latin-600.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* kantumruy-pro-700 - latin */
+@font-face {
+  font-family: "Kantumruy Pro";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("fonts/kantumruy-pro-v3-latin-700.woff2") format("woff2"), url("fonts/kantumruy-pro-v3-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+:root {
+  --padding-lien: 7px 12px;
+}
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+  --taille-texte: 1.5rem;
+  --font-texte: "Kantumruy Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-titre: var(--font-texte);
+}
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+  color: rgba(0, 0, 0, 0.9);
+  color: var(--texte);
+  font-family: "Kantumruy Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: var(--font-texte);
+  font-size: 1.5rem;
+  font-size: var(--taille-texte);
+  font-weight: 400;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--vert);
+  color: var(--blanc);
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+h1,
+.h1,
+h2,
+h3,
+h4,
+.h2,
+.h3,
+.h4 {
+  font-family: var(--font-titre);
+  font-weight: 700;
+  padding: 0;
+}
+
+h1,
+.h1 {
+  color: var(--vert);
+  font-size: calc(35 * var(--taille-texte) / 15);
+  line-height: 1.2;
+  margin: 1em 0 0.5em;
+  position: relative;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+h1::before,
+.h1::before {
+  background-image: url("icons/picto-fruit-vert.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: inline-block;
+  height: 4rem;
+  margin-right: 8px;
+  position: relative;
+  top: 8px;
+  width: 3.6rem;
+}
+h1.has-rouge-color::before,
+.h1.has-rouge-color::before {
+  background-image: url("icons/picto-fruit-rouge.png");
+}
+h1.has-blanc-color::before,
+.h1.has-blanc-color::before {
+  background-image: url("icons/picto-fruit-blanc.png");
+}
+
+h2,
+h3,
+.h2,
+.h3 {
+  color: var(--rouge);
+  margin: 0 0 0.5em;
+}
+
+h2,
+.h2 {
+  font-size: calc(24 * var(--taille-texte) / 15);
+}
+
+h3,
+.h3 {
+  font-size: calc(20 * var(--taille-texte) / 15);
+}
+
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  color: var(--texte);
+}
+
+p {
+  margin-bottom: 1em;
+  margin-top: 0;
+}
+
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+blockquote {
+  border-left: solid 5px var(--orange);
+  font-size: 1.2em;
+  margin: 0 0 1em;
+  padding: 5px 27px;
+}
+blockquote cite {
+  font-weight: 700;
+}
+
+mark,
+ins {
+  background: var(--fond);
+  text-decoration: none;
+}
+
+small,
+.has-small-font-size {
+  font-size: calc(12 * var(--taille-texte) / 15);
+}
+
+.has-regular-font-size {
+  font-size: calc(15 * var(--taille-texte) / 15);
+}
+
+big,
+.has-big-font-size {
+  font-size: calc(25 * var(--taille-texte) / 15);
+}
+
+.has-huge-font-size {
+  font-size: calc(35 * var(--taille-texte) / 15);
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+  background-color: var(--fond);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  -webkit-clip-path: none;
+          clip-path: none;
+  display: block;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+  outline: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0s !important;
+    transition-duration: 0s !important;
+  }
+}
 /*@import "base/normalize";
 @import "base/utilities";
 @import "base/layout";
-@import "base/typography";
 @import "base/elements";
 @import "base/boutons"; */
 .wp-block-button__link {
-  background-color: var(--bleu);
+  border-radius: 0;
+  font-weight: bold;
   text-transform: uppercase;
-}
-
-a.wp-block-button__link {
-  font-size: calc(12 * var(--taille-texte) / 15);
-  font-weight: 600;
-  border: none;
-  border-radius: 0;
-  cursor: pointer;
-  display: inline-block;
-  margin-bottom: 1em;
-  padding: 0.5rem 1.2rem;
-  text-align: center;
-  vertical-align: middle;
-  background: var(--bleu);
-  border-radius: 0;
-  color: var(--blanc);
-  text-decoration: none;
-  transition: all var(--transition);
-}
-a.wp-block-button__link:hover, a.wp-block-button__link:focus, a.wp-block-button__link:active {
-  background: var(--gris);
-  outline: none;
-  text-decoration: none;
-}
-a.wp-block-button__link:focus-visible {
-  outline: solid 1px var(--gris);
 }
 
 .block-list-appender button, button.acf-button, .wp-editor-tabs button {

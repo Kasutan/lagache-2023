@@ -1,26 +1,7 @@
 .wp-block-button__link {
-	background-color: var(--bleu);
+	border-radius: 0;
+	font-weight: bold;
 	text-transform: uppercase;
-}
-a.wp-block-button__link {
-	@include bouton;
-
-	background: var(--bleu);
-	border-radius:0;
-	color: var(--blanc);
-	
-	text-decoration: none;
-	transition: all var(--transition);
-
-	&:hover, &:focus, &:active {
-		background: var(--gris);
-		outline: none;
-		text-decoration: none;
-	}
-	&:focus-visible {
-		outline : solid 1px var(--gris);
-	}
-	
 }
 
 .block-list-appender button, button.acf-button , .wp-editor-tabs button {

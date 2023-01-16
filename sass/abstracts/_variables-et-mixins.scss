@@ -62,15 +62,15 @@ $colors: (
 
 
 @mixin bouton {
-	@include fs(12);
-	font-weight: 600;
+	font-weight: 700;
 	border: none;
 	border-radius: 0;
 	cursor: pointer;
 	display:inline-block;
-	margin-bottom: 1em;
-	padding: 0.5rem 1.2rem;
+	margin: 0 auto 1em;
+	padding: 0.7rem 1.3rem;
 	text-align: center;
+	text-transform: uppercase;
 	vertical-align: middle;
 }
 
