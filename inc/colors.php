@@ -7,40 +7,19 @@
  * @package kasutan
  */
 
-add_theme_support( 'editor-color-palette', array(
-	array(
-		'name'  =>'Bleu',
-		'slug'  => 'bleu',
-		'color'	=> '#2F80ED',
-	),
-	array(
-		'name'  =>'Orange',
-		'slug'  => 'orange',
-		'color'	=> '#FC950F',
-	),
-	array(
-		'name'  =>'Fond orange pastel',
-		'slug'  => 'fond',
-		'color'	=> '#FFF6EB',
-	),
-	array(
-		'name'  =>'Gris foncé',
-		'slug'  => 'gris',
-		'color'	=> '#282828',
-	),
-	array(
-		'name'  =>'Gris (texte)',
-		'slug'  => 'gris-texte',
-		'color'	=> '#333333',
-	),
-	array(
-		'name'  =>'Blanc',
-		'slug'  => 'blanc',
-		'color'	=> '#ffffff',
-	),
-	array(
-		'name'  =>'Noir',
-		'slug'  => 'noir',
-		'color'	=> '#101631',
-	),
-));
+$colors_sass=array('blanc'=>'#fff', 
+'vert' =>'#3A7C32', 
+'rouge' =>'#C03419',
+'orange' =>'#DF9240', 
+'gris' =>'rgba(0,0,0,0.6',
+'texte' =>'rgba(0,0,0,0.9)',
+'bordure' =>'rgba(0,0,0,0.4)',
+'noir' =>'#000000');
+
+$colors_editor=array();
+
+foreach($colors_sass as $nom=>$couleur) {
+	$colors_editor[]=array('name'=>$nom,'slug'=>$nom,'color'=>$couleur);
+}
+
+add_theme_support( 'editor-color-palette',$colors_editor);
