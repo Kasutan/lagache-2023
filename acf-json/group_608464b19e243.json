@@ -1,6 +1,6 @@
 {
     "key": "group_608464b19e243",
-    "title": "Bannière de la page",
+    "title": "En-tête de la page",
     "fields": [
         {
             "key": "field_608464c388d03",
@@ -26,6 +26,31 @@
             "max_size": "",
             "mime_types": "jpg, jpeg",
             "preview_size": "medium"
+        },
+        {
+            "key": "field_63c5685afc810",
+            "label": "Masquer le titre de cette page ?",
+            "name": "lagache_masquer_titre",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "oui": "oui",
+                "non": "non"
+            },
+            "default_value": "non",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
         }
     ],
     "location": [
@@ -53,6 +78,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1673345653,
-    "local_file": "C:UsersMagalieLocal Siteslagacheapppublic\/wp-content\/themes\/lagache-2023\/acf-json\/group_608464b19e243.json"
+    "modified": 1673881753
 }

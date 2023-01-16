@@ -25,7 +25,7 @@ add_filter( 'body_class', 'ea_archive_body_class' );
  */
 add_action( 'tha_content_while_before', 'ea_archive_header' );
 function ea_archive_header() {
-/*
+
 	$title = false;
 
 	if( is_home() ) {
@@ -41,10 +41,10 @@ function ea_archive_header() {
 	if( empty( $title ) )
 		return;
 
-*/
+
 	echo '<header class="entry-header">';
 	do_action ('ea_archive_header_before' );
-		//echo '<h1 class="entry-title">' . $title . '</h1>';
+		echo '<h1 class="entry-title">' . $title . '</h1>';
 	do_action ('ea_archive_header_after' );
 	echo '</header>';
 

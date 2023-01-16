@@ -49,26 +49,20 @@ a:focus-visible {
 p.fil-ariane {
 	align-items: center;
 	display:flex;
-	color:var(--gris);
+	color:var(--rouge);
 	flex-wrap: wrap;
 	@include fs(12);
-	margin-bottom:20px;
 	margin-top: 14px;
-	@include bp(lg) {
-		margin-bottom: 40px;
-	}
-	@include bp(xl) {
-		margin-bottom: 60px;
-	}
+	text-transform: uppercase;
 	a {
-		color:var(--gris);
+		color:var(--rouge);
+		font-weight: 400;
+		text-decoration: none;
 		&:hover, &:focus {
 			text-decoration: underline;
 		}
 	}
-	.current {
-		color:var(--orange);
-	}
+
 	.sep {
 		display: inline-block;
 		margin:0 0.5ch;

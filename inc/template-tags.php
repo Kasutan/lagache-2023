@@ -123,12 +123,11 @@ function kasutan_fil_ariane() {
 
 	
 	//Pour tous les contenus : afficher en premier le lien vers l'accueil du site
-	//Non pas pour ce site
-	/*$accueil=get_option('page_on_front');
-	printf('<a href="%s">%s</a> > ',
+	$accueil=get_option('page_on_front');
+	printf('<a href="%s">%s</a><span class="sep">></span>',
 		get_the_permalink( $accueil),
 		strip_tags(get_the_title($accueil))
-	);*/
+	);
 	
 
 
@@ -144,7 +143,7 @@ function kasutan_fil_ariane() {
 		endif;
 		
 		//Ajouter la catégorie d'article pour les posts single
-		
+		/*
 		if(is_single()) {
 			$term=ea_first_term();
 			if(!empty($term)) {
@@ -154,25 +153,13 @@ function kasutan_fil_ariane() {
 					$term->name
 				);
 			}
-		}
-	endif;
-
-
-	//Afficher "Groupes de travail" pour les single de ce type de contenu
-	if ( (is_single() && 'lagache_groupes' === $post_type) ) :
-		$url='/#groupes'; //ancre vers la section groupes de travail sur la page d'accueil
-		//TODO penser à ajouter cet ID dans le bloc ACF
-		//TODO url modifiable en BO ?
-		printf('<a href="%s">Groupes de travail</a><span class="sep">></span>',
-			$url
-		);
-		
+		}*/
 	endif;
 
 
 	//Afficher le titre de la page courante
 	if(is_page()) : 
-		//Afficher le titre de la page parente s'il y en a une
+		//Afficher le titre de la page parente s'il y en a une, non cliquable
 		$current=get_post(get_the_ID());
 		$parent=$current->post_parent; 
 		if($parent) :
@@ -190,9 +177,9 @@ function kasutan_fil_ariane() {
 			strip_tags(get_the_title())
 		);
 	elseif (is_category()) :  //archives catégories d'articles
-		//echo '<span class="current">'.strip_tags(single_cat_title( '', false )).'</span>';
+		echo '<span class="current">'.strip_tags(single_cat_title( '', false )).'</span>';
 	elseif (is_tag()) :  //archives tags d'articles
-		//echo '<span class="current">'.strip_tags(single_tag_title( '', false )).'</span>';
+		echo '<span class="current">'.strip_tags(single_tag_title( '', false )).'</span>';
 	elseif (is_home()) :
 		echo '<span class="current">Actualités</span>';
 	elseif (is_search()) :
@@ -208,42 +195,53 @@ function kasutan_fil_ariane() {
 }
 
 
-
+/**
+* Affiche le titre des pages ordinaires
+*
+*/
+function kasutan_page_titre() {
+	$masquer=false;
+	$classe="entry-title";
+	$titre=get_the_title();
+	if(function_exists('get_field') && esc_attr(get_field('lagache_masquer_titre'))==='oui') {
+		$masquer=true;
+	}
+	if(is_front_page(  )) {
+		$masquer=true;
+	}
+	if($masquer) {
+		$classe.=" screen-reader-text";
+	}
+	printf('<h1 class="%s">%s</h1>',$classe,$titre);
+}
 
 /**
 * Image banniere pour les pages ordinaires
 *
 */
-function kasutan_page_banniere($page_id=false,$titre=false,$image_defaut=false,$balise_titre=true) {
+function kasutan_page_banniere($page_id=false,$use_defaut=false) {
+	if(is_front_page(  )) {
+		return;
+	}
+
 	if(!function_exists('get_field')) {
 		return;
 	}
-	if(!$page_id) {
-		$page_id=get_the_ID();
-	}
-	if(!$titre) {
-		$titre=wp_kses_post(get_field('lagache_banniere_titre',$page_id));
-	}
-	if(!$titre) {
-		$titre=get_the_title($page_id);
-	}
-	if(!$image_defaut) {
+	$image_id="";
+	if(!$use_defaut) {
+		if(!$page_id) {
+			$page_id=get_the_ID();
+		}
 		$image_id=esc_attr(get_field('lagache_banniere_image',$page_id));
 	}
-	if(!$image_id || $image_defaut) {
+	
+	if(!$image_id || $use_defaut) {
 		$image_id=esc_attr(get_field('lagache_bg_image','option'));//image par défaut
 	}
 
 	if(!empty($image_id)) {
 		printf('<div class="page-banniere">');
 			echo wp_get_attachment_image( $image_id, 'banniere',false,array('decoding'=>'async','loading'=>'eager'));
-			if(!empty($titre)) {
-				if($balise_titre) {
-					printf('<div class="titre-banniere"><h1>%s</h1></div>',$titre);
-				} else {
-					printf('<div class="titre-banniere"><span class="h1">%s</span></div>',$titre);
-				}
-			}
 		echo '</div>';
 	}
 }
@@ -266,27 +264,13 @@ function kasutan_actus_banniere() {
 			$image_id=esc_attr(get_field('lagache_bg_image','option'));//image par défaut
 		}
 
-		//On affiche la bannière normale mais avec le label de sa catégorie principale, au singulier (option ACF dans la taxonomie)
-		$singulier='';
-		$term=ea_first_term();
-		if($term) {
-			$term_id=$term->term_id;
-			$singulier=wp_kses_post(get_field('lagache_singulier','category_'.$term_id));
-		}
-		if(!$singulier) {
-			$singulier='Actualité'; // Par défaut
-		}
-
-		kasutan_page_banniere(get_the_ID(),$singulier,false,false);
+		kasutan_page_banniere(get_the_ID());
 		return;
 	} 
 
-	
-
-
 	if(is_search()) {
 		
-		kasutan_page_banniere(false,'Recherche',true);
+		kasutan_page_banniere(false,true);
 		return;
 	}
 
