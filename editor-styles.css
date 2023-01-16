@@ -259,6 +259,11 @@ textarea {
     margin-bottom: -1.8em;
   }
 }
+@media screen and (max-width: 781px) and (min-width: 1920px) {
+  .wp-block-group.bloc-bleu {
+    width: var(--largeur-max);
+  }
+}
 
 .wp-block-columns.alignfull {
   margin-bottom: 0;
@@ -282,6 +287,11 @@ textarea {
   margin-left: 50%;
   transform: translateX(-50%);
   padding: 0 var(--padding-x);
+}
+@media (min-width: 1920px) {
+  .wp-block-image.alignwide {
+    width: var(--largeur-max);
+  }
 }
 .wp-block-image.alignwide figcaption {
   text-align: right;

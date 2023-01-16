@@ -52,6 +52,9 @@ $colors: (
 	width: 100vw;
 	margin-left: 50%;
 	transform: translateX(-50%);
+	@include bp(xxl) {
+		width:var(--largeur-max);
+	}
 }
 
 @mixin largeur-max {

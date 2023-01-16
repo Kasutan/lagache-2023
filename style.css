@@ -538,6 +538,11 @@ body .entry-content {
   padding-left: 0;
   padding-right: 0;
 }
+@media (min-width: 1920px) {
+  .alignfull, .bleed-container {
+    width: var(--largeur-max);
+  }
+}
 
 .container {
   padding: 0 var(--padding-x);
@@ -1986,6 +1991,11 @@ form.search-form input.search-submit {
     margin-bottom: calc(-1 * var(--margin-y-1));
   }
 }
+@media screen and (max-width: 959px) and (min-width: 1920px) {
+  .single-lagache_groupes .bloc-bleu {
+    width: var(--largeur-max);
+  }
+}
 .single-lagache_groupes .bloc-bleu {
   background-color: var(--bleu);
   color: var(--blanc);
@@ -2009,6 +2019,11 @@ form.search-form input.search-submit {
   background-color: var(--fond);
   margin-bottom: var(--margin-y-1);
   padding: 1rem 0;
+}
+@media (min-width: 1920px) {
+  .single-lagache_groupes .intro {
+    width: var(--largeur-max);
+  }
 }
 .single-lagache_groupes .intro .titre {
   padding: 0 var(--padding-x);
@@ -2220,6 +2235,11 @@ form.search-form input.search-submit {
     margin-bottom: -1.8em;
   }
 }
+@media screen and (max-width: 781px) and (min-width: 1920px) {
+  .wp-block-group.bloc-bleu {
+    width: var(--largeur-max);
+  }
+}
 
 .wp-block-columns.alignfull {
   margin-bottom: 0;
@@ -2243,6 +2263,11 @@ form.search-form input.search-submit {
   margin-left: 50%;
   transform: translateX(-50%);
   padding: 0 var(--padding-x);
+}
+@media (min-width: 1920px) {
+  .wp-block-image.alignwide {
+    width: var(--largeur-max);
+  }
 }
 .wp-block-image.alignwide figcaption {
   text-align: right;
