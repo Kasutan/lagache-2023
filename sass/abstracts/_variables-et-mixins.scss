@@ -54,6 +54,12 @@ $colors: (
 	transform: translateX(-50%);
 }
 
+@mixin largeur-max {
+	max-width:var(--largeur-max);
+	margin-left:auto;
+	margin-right: auto;
+}
+
 
 @mixin bouton {
 	@include fs(12);
@@ -91,4 +97,10 @@ $colors: (
 	object-fit: cover;
 	object-position: center;
 	width: 100%;
+}
+
+@mixin decor-xl {
+	background-image: url('icons/decor-xl.svg');
+	background-position: center bottom;
+	background-repeat: no-repeat;
 }

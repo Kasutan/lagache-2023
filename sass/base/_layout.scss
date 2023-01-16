@@ -40,11 +40,15 @@ body {
 	}
 
 	@include bp(xxl) {
+		--padding-x: calc((var(--largeur-max) - 1114px)/2);
 		--padding-x-pleine-largeur : calc(50vw - var(--largeur-max)/2);
 	}
 }
 
 //Réglages de largeur communs à tous les templates
+.site-container {
+	@include largeur-max;
+}
 .site-main {
 	.fil-ariane, .entry-title {
 		padding-left: var(--padding-x);

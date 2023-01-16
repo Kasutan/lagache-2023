@@ -58,6 +58,11 @@
 	left: 0;
 	top: 0;
 	width:100%;
+
+	@include bp(xxl) {
+		left:calc((100vw - var(--largeur-max))/2);
+		width:var(--largeur-max);
+	}
 }
 
 #wpadminbar {
