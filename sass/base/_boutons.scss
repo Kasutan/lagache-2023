@@ -17,6 +17,9 @@ a.wp-block-button__link {
 	&.blanc {
 		--fond-bouton:var(--blanc);
 		--texte-bouton:var(--vert);
+		&.has-rouge-color {
+			--texte-bouton:var(--rouge);
+		}
 	}
 
 	@include bouton;

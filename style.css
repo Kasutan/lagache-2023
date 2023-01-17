@@ -881,6 +881,14 @@ a.wp-block-button__link.blanc {
   --fond-bouton:var(--blanc);
   --texte-bouton:var(--vert);
 }
+button.blanc.has-rouge-color,
+input[type=button].blanc.has-rouge-color,
+input[type=reset].blanc.has-rouge-color,
+input[type=submit].blanc.has-rouge-color,
+a.bouton.blanc.has-rouge-color,
+a.wp-block-button__link.blanc.has-rouge-color {
+  --texte-bouton:var(--rouge);
+}
 button, button:visited,
 input[type=button],
 input[type=button]:visited,
