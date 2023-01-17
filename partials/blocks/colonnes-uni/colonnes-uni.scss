@@ -1,0 +1,92 @@
+@import "./././sass/abstracts/variables-et-mixins";
+
+.colonnes-uni {
+	@include bleed;	
+	margin-bottom: 1rem;
+	overflow: hidden;
+	.col-texte {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		padding:0 var(--padding-x) 15px;
+	}
+	.image {
+		width:100%;
+		img {
+			object-fit: cover;
+			width:100%;
+		}
+	}
+	.bloc {
+		color:var(--blanc);
+		font-weight: 700;
+		margin-bottom: 0;
+		padding:1rem 2rem;
+	}
+	.decor {
+		display: none;
+	}
+
+	@include bp(md) {
+		align-items: stretch;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		margin-bottom: 2rem;
+		
+		.col-texte {
+			align-items: flex-start;
+			padding:0;
+			padding-bottom: 4rem;
+			padding-right:4rem;
+			padding-left:var(--padding-x);
+		}
+		
+		.image {
+			height:100%;
+			img {
+				height:100%;
+			}
+		}
+		&.gauche {
+			grid-auto-flow: dense;
+			.col-texte {
+				grid-column: 2;
+				padding-left:4rem;
+				padding-right:var(--padding-x);
+			}
+			.col-image {
+				grid-column: 1;
+			}
+		}
+	}
+
+	@include bp(lg) {
+		grid-template-columns: 55% 45%;
+		margin-bottom: 4rem;
+		position: relative;
+
+		.col-texte {
+			padding-bottom: 6rem;
+		}
+
+		.col-image {
+			position:relative;
+		}
+		.image {
+			left:0;
+			position: absolute;
+			top:0;
+		}
+		
+
+		&.gauche {
+			grid-template-columns: 45% 55%;
+		}
+	}
+
+	@include bp(xl) {
+		margin-bottom: 6rem;
+
+	}
+	
+}

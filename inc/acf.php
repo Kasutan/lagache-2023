@@ -202,7 +202,16 @@ class BE_ACF_Customizations {
 			array( 'colonne', 'decor', 'accueil')
 		);
 
-		
+		/*********Bloc colonnes-uni ***************/
+		$this->helper_register_block_type( 
+			'colonnes-uni',
+			'Bloc 2 colonnes sur fond coloré uni',
+			'Section avec titre, texte, bouton dans une colonne sur fond coloré uni, et photo dans une deuxième colonne.',
+			'carrot', 
+			false,
+			array( 'colonne', 'uni', 'accueil')
+		);
+
 		/*********Bloc blog ***************/
 		$this->helper_register_block_type( 
 			'blog',
