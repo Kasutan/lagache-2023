@@ -121,11 +121,17 @@ h1,
 		top:8px;
 		width: 3.6rem;
 	}
-	&.has-rouge-color::before {
-		background-image: url('icons/picto-fruit-rouge.png');
+	&.has-rouge-color {
+		color:var(--rouge);
+		&::before {
+			background-image: url('icons/picto-fruit-rouge.png');
+		}
 	}
-	&.has-blanc-color::before {
-		background-image: url('icons/picto-fruit-blanc.png');
+	&.has-blanc-color{
+		color:var(--blanc);
+		&::before {
+			background-image: url('icons/picto-fruit-blanc.png');
+		}
 	}
 }
 

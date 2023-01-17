@@ -695,9 +695,17 @@ h1::before,
   top: 8px;
   width: 3.6rem;
 }
+h1.has-rouge-color,
+.h1.has-rouge-color {
+  color: var(--rouge);
+}
 h1.has-rouge-color::before,
 .h1.has-rouge-color::before {
   background-image: url("icons/picto-fruit-rouge.png");
+}
+h1.has-blanc-color,
+.h1.has-blanc-color {
+  color: var(--blanc);
 }
 h1.has-blanc-color::before,
 .h1.has-blanc-color::before {
@@ -839,7 +847,7 @@ a.wp-block-button__link {
   border-radius: 0;
   cursor: pointer;
   display: inline-block;
-  margin: 0 auto 1em;
+  margin: 0 0 1em;
   padding: 0.7rem 1.3rem;
   text-align: center;
   text-transform: uppercase;
