@@ -182,7 +182,27 @@ class BE_ACF_Customizations {
 			return;
 
 
-		 
+		/*********Bloc banniere ***************/
+		$this->helper_register_block_type( 
+			'banniere',
+			'Bloc image bannière',
+			'Section avec une image de fond et un texte sur fond coloré semi-opaque la page d\'accueil.',
+			'carrot', 
+			false,
+			array( 'banniere', 'accueil')
+		);
+
+		/*********Bloc colonnes-decor ***************/
+		$this->helper_register_block_type( 
+			'colonnes-decor',
+			'Bloc 2 colonnes avec décor',
+			'Section avec titre, texte, bouton dans une colonne, photo et bloc de texte dans une deuxième colonne, et décor en arrière-plan.',
+			'carrot', 
+			false,
+			array( 'colonne', 'decor', 'accueil')
+		);
+
+		
 		/*********Bloc blog ***************/
 		$this->helper_register_block_type( 
 			'blog',
@@ -203,15 +223,7 @@ class BE_ACF_Customizations {
 			array('carré', 'carre', 'accueil')
 		);
 
-		/*********Bloc chiffres ***************/
-		$this->helper_register_block_type( 
-			'banniere',
-			'Bloc image bannière',
-			'Section avec une image de fond et un texte sur fond coloré semi-opaque la page d\'accueil.',
-			'carrot', 
-			false,
-			array( 'banniere', 'accueil')
-		);
+		
 
 		/*********Bloc administrateur ***************/
 		$this->helper_register_block_type( 

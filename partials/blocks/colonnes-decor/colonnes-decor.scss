@@ -1,0 +1,125 @@
+@import "./././sass/abstracts/variables-et-mixins";
+
+.colonnes-decor {
+	@include bleed;	
+	margin-bottom: 1rem;
+	overflow: hidden;
+	.col-texte {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		padding:0 var(--padding-x) 15px;
+	}
+	.image {
+		width:100%;
+		img {
+			object-fit: cover;
+			width:100%;
+		}
+	}
+	.bloc {
+		color:var(--blanc);
+		font-weight: 700;
+		margin-bottom: 0;
+		padding:1rem 2rem;
+	}
+	.decor {
+		display: none;
+	}
+
+	@include bp(sm) {
+		align-items: center;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		margin-bottom: 0;
+		&.gauche {
+			grid-auto-flow: dense;
+			.col-texte {
+				grid-column: 2;
+			}
+			.col-image {
+				grid-column: 1;
+			}
+		}
+	}
+
+	@include bp(md) {
+		padding:0 var(--padding-x);
+		.col-texte {
+			align-items: flex-start;
+			padding:0;
+			padding-bottom: 4rem;
+			padding-right:4rem;
+		}
+
+		&.gauche {
+			.col-texte {
+				padding:0;
+				padding-left:4rem;
+			}
+		}
+	}
+	@include bp(lg) {
+		align-items: stretch;
+		grid-template-columns: 55% 45%;
+		position: relative;
+		.col-texte {
+			padding-bottom: 6rem;
+			position: relative;
+		}
+		.col-image {
+			position:relative;
+		}
+		.image {
+			height:100%;
+			padding-left:4rem;
+			padding-bottom: 3rem;
+			img {
+				height:100%;
+			}
+		}
+		.bloc {
+			bottom:5rem;
+			left:0;
+			position: absolute;
+			width:24.2rem;
+		}
+
+		&.gauche {
+			grid-template-columns: 45% 55%;
+			.image {
+				padding-left: 0;
+				padding-right: 4rem;
+			}
+			.bloc {
+				left : unset;
+				right:0;
+			}
+		}
+
+		.decor {
+			bottom:0;
+			display: block;
+			left:-10rem;
+			position: absolute;
+			path {
+				fill:var(--vert);
+				&.superpose {
+					fill:none;
+				}
+			}
+		}
+		&.rouge .decor path {
+			fill : var(--rouge);
+			&.superpose {
+				fill:none;
+			}
+		}
+	}
+	@include bp(xl) {
+		.col-texte {
+			padding-bottom: 9rem;
+		}
+		
+	}
+}

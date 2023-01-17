@@ -104,6 +104,15 @@ function ea_bg_image_style( $image_id = false, $image_size = 'full' ) {
 		return ' style="background-image: url(' . wp_get_attachment_image_url( $image_id, $image_size ) . ');"';
 }
 
+/* Decor svg*/
+
+function kasutan_affiche_decor_svg($nom) {
+	$icon_path = get_theme_file_path( '/icons/' . $nom . '.svg' );
+	if( file_exists( $icon_path ) ) {
+		printf('<div class="decor">%s</div>',file_get_contents( $icon_path ));
+	}
+}
+
 /**
  * Get Icon
  * This function is in charge of displaying SVG icons across the site.

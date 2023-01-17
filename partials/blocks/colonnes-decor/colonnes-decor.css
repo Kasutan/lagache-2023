@@ -1,0 +1,128 @@
+.colonnes-decor {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+@media (min-width: 1920px) {
+  .colonnes-decor {
+    width: var(--largeur-max);
+  }
+}
+.colonnes-decor .col-texte {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--padding-x) 15px;
+}
+.colonnes-decor .image {
+  width: 100%;
+}
+.colonnes-decor .image img {
+  object-fit: cover;
+  width: 100%;
+}
+.colonnes-decor .bloc {
+  color: var(--blanc);
+  font-weight: 700;
+  margin-bottom: 0;
+  padding: 1rem 2rem;
+}
+.colonnes-decor .decor {
+  display: none;
+}
+@media (min-width: 500px) {
+  .colonnes-decor {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 0;
+  }
+  .colonnes-decor.gauche {
+    grid-auto-flow: dense;
+  }
+  .colonnes-decor.gauche .col-texte {
+    grid-column: 2;
+  }
+  .colonnes-decor.gauche .col-image {
+    grid-column: 1;
+  }
+}
+@media (min-width: 768px) {
+  .colonnes-decor {
+    padding: 0 var(--padding-x);
+  }
+  .colonnes-decor .col-texte {
+    align-items: flex-start;
+    padding: 0;
+    padding-bottom: 4rem;
+    padding-right: 4rem;
+  }
+  .colonnes-decor.gauche .col-texte {
+    padding: 0;
+    padding-left: 4rem;
+  }
+}
+@media (min-width: 960px) {
+  .colonnes-decor {
+    align-items: stretch;
+    grid-template-columns: 55% 45%;
+    position: relative;
+  }
+  .colonnes-decor .col-texte {
+    padding-bottom: 6rem;
+    position: relative;
+  }
+  .colonnes-decor .col-image {
+    position: relative;
+  }
+  .colonnes-decor .image {
+    height: 100%;
+    padding-left: 4rem;
+    padding-bottom: 3rem;
+  }
+  .colonnes-decor .image img {
+    height: 100%;
+  }
+  .colonnes-decor .bloc {
+    bottom: 5rem;
+    left: 0;
+    position: absolute;
+    width: 24.2rem;
+  }
+  .colonnes-decor.gauche {
+    grid-template-columns: 45% 55%;
+  }
+  .colonnes-decor.gauche .image {
+    padding-left: 0;
+    padding-right: 4rem;
+  }
+  .colonnes-decor.gauche .bloc {
+    left: unset;
+    right: 0;
+  }
+  .colonnes-decor .decor {
+    bottom: 0;
+    display: block;
+    left: -10rem;
+    position: absolute;
+  }
+  .colonnes-decor .decor path {
+    fill: var(--vert);
+  }
+  .colonnes-decor .decor path.superpose {
+    fill: none;
+  }
+  .colonnes-decor.rouge .decor path {
+    fill: var(--rouge);
+  }
+  .colonnes-decor.rouge .decor path.superpose {
+    fill: none;
+  }
+}
+@media (min-width: 1440px) {
+  .colonnes-decor .col-texte {
+    padding-bottom: 9rem;
+  }
+}
