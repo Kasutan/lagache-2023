@@ -1,0 +1,117 @@
+.intro-produits {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 0 var(--padding-x);
+  position: relative;
+  z-index: 2;
+}
+@media (min-width: 1920px) {
+  .intro-produits {
+    width: var(--largeur-max);
+  }
+}
+.intro-produits .col-texte {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.intro-produits .texte {
+  font-weight: 700;
+}
+.intro-produits .col-images {
+  height: 100vw;
+  position: relative;
+}
+.intro-produits .image-1 {
+  bottom: -5vw;
+  left: 0;
+  position: absolute;
+  width: 65vw;
+}
+.intro-produits .image-2 {
+  bottom: 40vw;
+  left: 30vw;
+  position: absolute;
+  width: 45vw;
+}
+.intro-produits .image-3 {
+  bottom: 65vw;
+  position: absolute;
+  right: 0;
+  width: 30vw;
+}
+@media screen and (min-width: 600px) {
+  .intro-produits {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .intro-produits .col-texte {
+    max-width: 600px;
+  }
+  .intro-produits .col-images {
+    height: 535px;
+    width: 600px;
+  }
+  .intro-produits .col-images .image-1 {
+    bottom: -36px;
+    width: 361px;
+  }
+  .intro-produits .col-images .image-2 {
+    bottom: 183px;
+    left: 180px;
+    width: 267px;
+  }
+  .intro-produits .col-images .image-3 {
+    bottom: 330px;
+    left: 380px;
+    right: unset;
+    width: 193px;
+  }
+}
+@media (min-width: 960px) {
+  .intro-produits {
+    --scale:0.65;
+    background-image: url("decor-fruit.svg");
+    background-position-x: calc(50% + 150px);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .intro-produits .col-texte {
+    display: block;
+  }
+  .intro-produits .col-images, .intro-produits .col-texte {
+    flex: 0 0 50%;
+    max-width: unset;
+    width: 50%;
+  }
+  .intro-produits .images {
+    transform-origin: bottom left;
+    transform: scale(var(--scale));
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .intro-produits {
+    --scale:0.7;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .intro-produits {
+    --scale:0.8;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .intro-produits {
+    --scale:0.85;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .intro-produits {
+    --scale:0.9;
+  }
+}

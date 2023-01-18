@@ -212,6 +212,16 @@ class BE_ACF_Customizations {
 			array( 'colonne', 'uni', 'accueil')
 		);
 
+		/*********Bloc intro-produits ***************/
+		$this->helper_register_block_type( 
+			'intro-produits',
+			'Bloc introduction produits avec 3 images',
+			'Section avec titre, texte, bouton dans une colonne, et 3 photos rondes dans une deuxième colonne, sur fond uni coloré avec décor.',
+			'carrot', 
+			false,
+			array( 'produits', 'intro', 'accueil')
+		);
+
 		/*********Bloc blog ***************/
 		$this->helper_register_block_type( 
 			'blog',
