@@ -31,7 +31,7 @@ printf('<section class="acf blog %s">', $className);
 		return;
 	}
 
-	printf('<h2 class="titre-section">%s</h2>','Actualités');
+	printf('<h2 class="titre-section h1 has-rouge-color">%s</h2>',$titre);
 
 	echo '<div class="loop">';
 	while ( $articles->have_posts() ) {
@@ -44,7 +44,7 @@ printf('<section class="acf blog %s">', $className);
 
 	$actus=get_option( 'page_for_posts' );
 	if($actus) {
-		printf('<div class="text-center"><a class="bouton" href="%s?filtre_cat=toutes">Voir toutes les actualités</a></div>',get_the_permalink( $actus));
+		printf('<div class="text-center"><a href="%s?filtre_cat=toutes">Voir toutes nos actualités</a></div>',get_the_permalink( $actus));
 	}
 
 echo '</section>';

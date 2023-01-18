@@ -180,10 +180,7 @@ add_filter( 'comment_form_defaults', 'ea_comment_form_button_class' );
  *
  */
 function ea_excerpt_more($more) {
-	return sprintf( '&nbsp;<a href="%s" class="suite"><span class="screen-reader-text">Lire la suite de %s</span>>>></a>',
-		esc_url( get_permalink( get_the_ID() ) ),
-		get_the_title( get_the_ID() )
-	);
+	return '...';
 }
 add_filter( 'excerpt_more', 'ea_excerpt_more' );
 

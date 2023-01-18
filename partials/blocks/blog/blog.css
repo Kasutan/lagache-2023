@@ -2,8 +2,7 @@
   margin: 40px 0;
 }
 .blog .titre-section {
-  font-size: calc(30 * var(--taille-texte) / 14);
-  margin-bottom: 0;
+  text-align: center;
 }
 .blog .owl-carousel .owl-item .entry-date img {
   width: 22px;

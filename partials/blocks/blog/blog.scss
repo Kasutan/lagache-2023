@@ -3,8 +3,7 @@
 .blog {
 	margin:40px 0;
 	.titre-section {
-		@include fs(30);
-		margin-bottom: 0;
+		text-align: center;
 	}
 
 	//Carrousel en mobile

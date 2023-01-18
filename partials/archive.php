@@ -20,19 +20,17 @@ printf('<%s class="post-summary">',$tag);
 
 	echo '<div class="post-summary__content">';
 		ea_entry_category('archive');
-		printf('<p class="entry-date"><img class="picto-date" alt="picto calendrier" src="%s/icons/today.png" width="22" height="22"/>%s</p>',get_stylesheet_directory_uri(  ), get_the_date('d F Y'));
+		
 		ea_post_summary_title();
+
+		printf('<p class="entry-date">%s</p>', get_the_date('d F Y'));
+
 		$extrait=wpautop(get_the_excerpt());
 		printf('<div class="extrait">%s</div>',$extrait);
 
-		$content=apply_filters('the_content',get_the_content());
-		$p1=strpos($content,'</p>');
-		$p2=strpos($content,'</p>',$p1+5);
-		if($p2) {
-			$content=substr($content,0,$p2+4);
-		}
-		printf('<div class="debut-content">%s <a href="%s" class="suite-content bouton">Lire la suite<span class="screen-reader-text"> de %s</span></a></div>',$content,esc_url( get_permalink( ) ),
-		get_the_title( ));
+		printf('<a href="%s" class="bouton suite" title="Lire cet article"><span class="screen-reader-text">Lire %s</span>
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.969 18.81"><path d="M87.666,41.75l7.407-7.407a.593.593,0,0,0,0-.867l-.942-.942a.592.592,0,0,0-.867,0l-8.783,8.783a.593.593,0,0,0,0,.867l8.783,8.783a.592.592,0,0,0,.867,0l.942-.942a.593.593,0,0,0,0-.867Z" transform="translate(95.262 51.155) rotate(180)" fill="#ffffff"/></svg>
+		</a>',esc_url( get_permalink( ) ),get_the_title( ));
 		
 	echo '</div>';
 

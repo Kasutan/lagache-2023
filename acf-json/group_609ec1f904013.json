@@ -40,7 +40,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "show_in_rest": false,
-    "modified": 1673345654,
-    "local_file": "C:UsersMagalieLocal Siteslagacheapppublic\/wp-content\/themes\/lagache-2023\/acf-json\/group_609ec1f904013.json"
+    "show_in_rest": 0,
+    "modified": 1674056544
 }

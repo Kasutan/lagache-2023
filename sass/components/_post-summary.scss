@@ -1,7 +1,6 @@
 //Vignette article pour pages archives (y compris recherche)
 .post-summary {
-	@include box-shadow();
-	color:var(--noir);
+	//@include box-shadow();
 	display: flex;
 	flex-direction: column;
 	margin:0 auto var(--margin-y-1);
@@ -9,29 +8,39 @@
 	position:relative;
 	
 	p.entry-date {
+		color:var(--rouge)
+	}
+
+	a.suite {
 		align-items: center;
-		@include fs(11);
+		border-radius: 50%;
 		display: flex;
-		font-weight: 300;
-		.picto-date {
-			display: inline-block;
-			margin-right: 2px;
+		height:2.6rem;
+		justify-content: center;
+		margin-bottom: 0;
+		padding:0;
+		padding-left: 2px;
+		width:2.6rem;
+		svg {
+			max-height:60%;
+			max-width:90%;
 		}
 	}
 }
 
 
-.post-summary__title a {
-	color:var(--noir);
-	display: inline-block;
-	@include fs(14);
-	margin-bottom: 0.5em;
-}
+.post-summary__title {
+	line-height: 1.2;
+	margin-bottom: 0;
+	a {
+		text-decoration: none;
+	}
+} 
 .post-summary__image {
 	display: block;
-	margin-bottom: 2.2rem;
+	margin-bottom: 0.5rem;
 	img {
-		aspect-ratio:1;
+		aspect-ratio:1.36;
 		display: block;
 		width:100%;
 	}
@@ -44,7 +53,7 @@
 	}
 
 	@supports not (aspect-ratio: auto) { 
-		height: 293px;
+		height: 257px;
 		img {
 			height:100%;
 		}
@@ -54,31 +63,7 @@
 
 
 
-.post-summary__content {
-	@include fs(13);
-	padding:1rem 3rem;
-	display: flex;
-	flex-direction: column;
-	position: relative;
-	.debut-content {
-		display: none;
-	}
-}
 
-.picto-cat {
-	@include box-shadow();
-	background-color: var(--orange);
-	height: 55px;
-	padding:8px 5px;
-	position: absolute;
-	right:10px;
-	width:29px;
-	top:-28px;
-	img {
-		object-fit: contain;
-		width:100%;
-	}
-}
 
 @include bp(md) {
 	.post-summary {
@@ -90,46 +75,5 @@
 	}
 	.post-summary__content {
 		flex-grow:1;
-		padding:1rem 3rem;
 	}
-
-	
-}
-
-@include bp(lg) {
-	//Premier article occupe toute la largeur de la grille en desktop, sur le blog uniquement
-	body.blog {
-		.post-summary:first-of-type {
-			grid-column: 1 / span 3;
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr;
-			gap: var(--margin-y-1);
-			box-shadow: unset;
-
-			.post-summary__image {
-				margin-bottom: 0;
-				padding:0;
-				img {
-					aspect-ratio: unset;
-					height:100%;
-				}
-			}
-			.picto-cat {
-				display: none;
-			}
-
-			.post-summary__content {
-				@include box-shadow();
-				grid-column: 2 / span 2;
-				padding:60px 60px 40px;
-				.extrait {
-					display: none;
-				}
-				.debut-content {
-					display: block;
-				}
-			}
-		}
-	}
-	
 }

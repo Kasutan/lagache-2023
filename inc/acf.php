@@ -227,7 +227,7 @@ class BE_ACF_Customizations {
 			'blog',
 			'Bloc blog',
 			'Section avec titre principal et les trois derniers articles publiés sur le blog. Carrousel sur petits écrans.',
-			'welcome-write-blog', 
+			'carrot', 
 			true, //JS pour carrousel mobile
 			array('blog', 'article', 'accueil')
 		);
