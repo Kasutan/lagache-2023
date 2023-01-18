@@ -1,0 +1,90 @@
+@import "./././sass/abstracts/variables-et-mixins";
+
+.newsletter {
+	@include bleed;
+	padding:3rem var(--padding-x);
+	position: relative;
+	.image {
+		height:100%;
+		left:0;
+		position: absolute;
+		top:0;
+		width:100%;
+		img {
+			height: 100%;
+			object-fit: cover;
+			object-position: center bottom;
+			width: 100%;
+		}
+		&.desktop {
+			display: none;
+		}
+	}
+	.titre-section {
+		text-align: center;
+		margin-bottom: 7rem;
+		position: relative;
+	}
+	.form-wrap {
+		position: relative;
+	}
+	.forminator-field {
+		text-align: center;
+	}
+	input[type="email"] {
+		background-color: #D9D9D9;
+		border:none;
+		display: block;
+		color:var(--noir);
+		margin:0 auto 1rem;
+		padding-left: 1rem;
+		text-align: left;
+		width: 29rem;
+	}
+	label {
+		@include screen-reader-text;
+	}
+	button.forminator-button-submit {
+		background-color: var(--vert);
+	}
+	.forminator-error-message, .forminator-response-message {
+		color:var(--blanc);
+		text-align: center;
+	}
+	@media screen and (max-width:500px) {
+		.titre-section.h1 {
+			text-decoration: none;
+			&::before {
+				display: none;
+			}
+		}	
+	}
+
+	@include bp(lg) {
+		.image {
+			&.mobile {
+				display: none;
+			}
+			&.desktop {
+				display: block;
+			}
+		}
+		.form-wrap form {
+			column-gap:36px;
+			display: grid;
+			grid-template-columns: 1fr 14rem;
+			margin:0 auto;
+			max-width:70rem;
+		}
+		.forminator-response-message {
+			grid-column: 1 / span 2;
+		}
+		input[type="email"] {
+			margin:0 0 1rem;
+			width:100%;
+		}
+		input[type="email"], button.forminator-button-submit {
+			height:4.3rem;
+		}
+	}
+}

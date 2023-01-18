@@ -232,14 +232,14 @@ class BE_ACF_Customizations {
 			array('blog', 'article', 'accueil')
 		);
 
-		/*********Bloc carrés ***************/
+		/*********Bloc newsletter ***************/
 		$this->helper_register_block_type( 
-			'carres',
-			'Bloc 3 carrés avec pictos',
-			'Section avec 3 carrés avec pictos pour la page d\'accueil.',
+			'newsletter',
+			'Bloc inscription newsletter',
+			'Section avec titre, formulaire et image de fond pour la page d\'accueil.',
 			'carrot', 
 			false,
-			array('carré', 'carre', 'accueil')
+			array('newsletter', 'formulaire', 'accueil')
 		);
 
 		
