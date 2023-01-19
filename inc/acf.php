@@ -242,6 +242,15 @@ class BE_ACF_Customizations {
 			array('newsletter', 'formulaire', 'accueil')
 		);
 
+		/*********Bloc carrousel de logos ***************/
+		$this->helper_register_block_type( 
+			'carrousel',
+			'Bloc carrousel de logos des marques',
+			'Section avec titre et carrousel de logos des marques',
+			'carrot', 
+			true, //besoin de JS pour le carrousel
+			array('logo', 'marque','carrousel')
+		);
 		
 
 		/*********Bloc administrateur ***************/
@@ -276,15 +285,7 @@ class BE_ACF_Customizations {
 			false //un seul bloc par page à cause de l'ID
 		);
 
-		/*********Bloc carrousel de logos ***************/
-		$this->helper_register_block_type( 
-			'carrousel',
-			'Bloc carrousel de logos des membres',
-			'Section avec titre et carrousel de logos des membres, présentés dans un ordre aléatoire',
-			'carrot', 
-			true, //besoin de JS pour le carrousel
-			array('logo', 'membre')
-		);
+		
 
 		/*********Bloc groupes ***************/
 		$this->helper_register_block_type( 

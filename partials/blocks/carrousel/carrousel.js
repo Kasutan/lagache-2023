@@ -6,9 +6,9 @@
 		var owl = $(".carrousel .owl-carousel"); 
 		if(owl.length > 0) {
 			var items= {
-				xsm : 1,
-				sm : 2,
-				md : 3,
+				xsm : 2,
+				sm : 3,
+				md : 4,
 				lg : 5,
 			}
 			owl.owlCarousel({

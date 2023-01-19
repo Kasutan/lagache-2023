@@ -1,6 +1,6 @@
 <?php 
 /**
-* Template pour le bloc Carrousel de logos des membres
+* Template pour le bloc Carrousel de logos des marques
 *
 * @param   array $block The block settings and attributes.
 * @param   string $content The block inner HTML (empty).
@@ -15,29 +15,21 @@ if(function_exists('get_field')) :
 	} else $className='';
 
 	$titre=wp_kses_post( get_field('titre') );
-	$label=wp_kses_post( get_field('label') );
-	$cible=esc_url( get_field('cible') );
+	$galerie=get_field('galerie');
 
-	$posts=get_posts(array(
-		'post_type'=>'sdds_membres',
-		'numberposts'=>-1,
-		'orderby'=>'rand'
-	));
-
-	if($posts) : 
+	if(!empty($galerie)) : 
 		printf('<section class="carrousel %s">',$className);
-		if($titre) printf('<h2 class="titre-section">%s</h2>',$titre);
-		echo '<div class="owl-carousel">';
-			foreach ($posts as $post_id) :
-				if(has_post_thumbnail( $post_id )) {
-					printf('<div class="slide logo">%s</div>',
-						get_the_post_thumbnail($post_id));
-				}
-			endforeach;
-		echo '</div>';
-		if($label && $cible) {
-			printf('<div class="flex-center"><a href="%s" class="bouton">%s</a></div>',$cible, $label);
-		}
+			
+		if($titre) printf('<h2 class="titre-section h1">%s</h2>',$titre);
+
+			echo '<div class="owl-carousel">';
+				foreach($galerie as $image_id) :
+					echo '<div class="logo">';
+					echo wp_get_attachment_image( $image_id, 'medium');
+					echo '</div>';
+				endforeach;
+			echo '</div>';
+	
 		echo '</section>';
 	endif;
 

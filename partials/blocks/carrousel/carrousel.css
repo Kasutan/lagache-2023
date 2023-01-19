@@ -1,14 +1,8 @@
 .carrousel {
-  display: none;
   margin-bottom: var(--margin-y-2);
 }
-@media (min-width: 768px) {
-  .carrousel {
-    display: block;
-  }
-}
 .carrousel .owl-item {
-  height: 100%;
+  height: 10rem;
 }
 .carrousel .logo {
   align-items: center;
@@ -18,8 +12,8 @@
   padding: 1rem 2rem;
 }
 .carrousel .logo img {
-  height: 10rem;
   object-fit: contain;
+  width: unset;
 }
 .carrousel .owl-dots {
   display: flex;
@@ -42,6 +36,6 @@
   margin-right: 0;
 }
 .carrousel .owl-dots button.active, .carrousel .owl-dots button:hover, .carrousel .owl-dots button:focus {
-  background-color: var(--orange);
+  background-color: var(--rouge);
   opacity: 1;
 }
