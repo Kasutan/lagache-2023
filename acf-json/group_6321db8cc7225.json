@@ -1,32 +1,13 @@
 {
     "key": "group_6321db8cc7225",
-    "title": "Informations sur le collaborateur",
+    "title": "Coordonnées du collaborateur",
     "fields": [
         {
-            "key": "field_6321dc8964569",
-            "label": "Adresse email",
-            "name": "email",
+            "key": "field_63c96db90a16b",
+            "label": "Fonction",
+            "name": "fonction",
             "aria-label": "",
-            "type": "email",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6321dc42ccdd1",
-            "label": "Fonction(s) au sein de l'association SDDS",
-            "name": "fonctions_sdds",
-            "aria-label": "",
-            "type": "textarea",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -37,14 +18,14 @@
             },
             "default_value": "",
             "maxlength": "",
-            "rows": 5,
             "placeholder": "",
-            "new_lines": "br"
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_6321dc2dccdd0",
-            "label": "Entreprise",
-            "name": "entreprise",
+            "label": "Numéro de téléphone fixe",
+            "name": "tel",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -63,8 +44,8 @@
         },
         {
             "key": "field_6321db8eccdcf",
-            "label": "Fonction dans l'entreprise",
-            "name": "fonction",
+            "label": "Numéro de téléphone mobile",
+            "name": "mobile",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -77,6 +58,25 @@
             },
             "default_value": "",
             "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6321dc8964569",
+            "label": "Adresse email",
+            "name": "email",
+            "aria-label": "",
+            "type": "email",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
             "placeholder": "",
             "prepend": "",
             "append": ""
@@ -100,5 +100,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1673346471
+    "modified": 1674145435
 }

@@ -253,68 +253,14 @@ class BE_ACF_Customizations {
 		);
 		
 
-		/*********Bloc administrateur ***************/
+		/*********Bloc collaborateurs ***************/
 		$this->helper_register_block_type( 
-			'administrateurs',
-			'Bloc administrateurs',
-			'Section avec composition du conseil d\'administration - une carte par personne. Les informations pour chaque personne sont à renseigner dans le menu pilotes',
+			'collaborateurs',
+			'Bloc collaborateurs',
+			'Section avec titre et grille de collaborateurs. Les coordonnées de chaque personne sont à renseigner dans le menu Collaborateurs',
 			'carrot', 
 			false,
-			array('pilote', 'conseil', 'administration','administrateur')
-		);
-		
-		/*********Bloc groupes ***************/
-		$this->helper_register_block_type( 
-			'groupes',
-			'Bloc groupes de travail',
-			'Section avec titre, introduction et listes cliquables de groupes de travail regroupées en collèges.',
-			'carrot', 
-			false,
-			array('college', 'collège'),
-			false //un seul bloc par page à cause de l'ID
-		);
-
-		/*********Bloc anciens groupes ***************/
-		$this->helper_register_block_type( 
-			'anciens-groupes',
-			'Bloc anciens groupes de travail (escamotable)',
-			'Section avec titre, introduction et listes cliquables de groupes de travail regroupées en collèges. Option pour afficher un bouton et rendre cette section escamotable',
-			'carrot', 
-			true, //besoin de JS pour la version escamotable
-			array('college', 'collège'),
-			false //un seul bloc par page à cause de l'ID
-		);
-
-		
-
-		/*********Bloc groupes ***************/
-		$this->helper_register_block_type( 
-			'intro',
-			'Bloc introduction',
-			'Section avec titre, sous-titre, texte, image ou vidéo et décor nuage en desktop.',
-			'carrot', 
-			false,
-			array('introduction', 'decor')
-		);
-
-		/*********Bloc table des membres ***************/
-		$this->helper_register_block_type( 
-			'membres',
-			'Bloc table des membres',
-			'Section avec table des membres et bouton pour télécharger la liste au format PDF.',
-			'carrot', 
-			false,
-			array('table','membre')
-		);
-
-		/*********Bloc table de l'écosystème ***************/
-		$this->helper_register_block_type( 
-			'ecosysteme',
-			'Bloc table de l\'écosysteme',
-			'Section avec table des organisations de l\'écosysteme et bouton pour télécharger la liste au format PDF.',
-			'carrot', 
-			false,
-			array('table','organisation','ecosysteme')
+			array('equipe','collaborateur')
 		);
 	}
 }

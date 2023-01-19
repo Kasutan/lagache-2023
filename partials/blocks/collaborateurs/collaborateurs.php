@@ -15,15 +15,14 @@ if(array_key_exists('className',$block)) {
 
 $collaborateurs=get_field('collaborateurs');
 
-if(!empty($collaborateurs) && function_exists('kasutan_pilote_affiche_carte')) : 
+if(!empty($collaborateurs) && function_exists('kasutan_collaborateur_affiche_carte')) : 
 	printf('<section class="acf collaborateurs %s">', $className);
-
-		$titre_section='Membres du conseil d\'administration';
-		if($titre_section) printf('<h2 class="screen-reader-text">%s</h2>',$titre_section);
-
+		$titre=wp_kses_post( get_field('titre') );
+		if($titre) printf('<h2 class="titre-section">%s</h2>',$titre);
+		
 		echo '<ul class="liste-collaborateurs">';
 		foreach($collaborateurs as $post_id) : 
-			kasutan_pilote_affiche_carte($post_id);
+			kasutan_collaborateur_affiche_carte($post_id);
 		endforeach;
 		echo '</ul>';
 
