@@ -1,0 +1,8 @@
+.blog {
+	h1.entry-title {
+		color:var(--rouge);
+		&::before {
+			background-image: url('icons/picto-fruit-rouge.png');
+		}
+	}
+}

@@ -6,23 +6,33 @@
 	padding:0 var(--padding-x);
 	margin:var(--margin-y-1) 0;
 
+	li {
+		&::after {
+			color:var(--rouge);
+			content: '-';
+			display: inline-block;
+			@include fs(20);
+			font-weight: 700;
+		}
+		&:last-of-type::after {
+			display: none;
+		}
+	}
 	a.page {
-		border:solid 2px transparent;
-		@include fs(12);
-		color:var(--bleu);
+		@include fs(20);
+		color:var(--rouge);
 		font-weight: 700;
 		margin:0 0.5rem;
-		padding:1rem;
+		padding:0.5rem;
 		text-decoration: none;
 		&:hover, &:focus {
-			border-color:var(--bleu);
+			text-decoration: underline;
 		}
+		
 	}
 
 	li.active a {
-		background-color: var(--bleu);
-		border-color:var(--bleu);
-		color:var(--blanc);
+		text-decoration: underline;
 	}
 
 	li.disabled a {

@@ -7,7 +7,7 @@
 		--------------------------------------------------------------*/
 		var optionsListe = {
 			valueNames: ['categorie'],
-			page: 7, 
+			page: 3, 
 			pagination: true
 		};
 	

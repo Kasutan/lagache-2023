@@ -298,7 +298,7 @@ function kasutan_affiche_thumbnail_dans_contenu() {
 */
 function kasutan_affiche_filtre_articles() {
 	$avec_pictos=function_exists('kasutan_picto_categorie');
-	echo '<p>Filtrer les actualités</p>';
+	echo '<p class="screen-reader-text">Filtrer les actualités</p>';
 	echo '<form class="filtre-archive" id="filtre-liste">';
 		$terms=get_terms( array(
 			'taxonomy' => 'category'
@@ -306,7 +306,7 @@ function kasutan_affiche_filtre_articles() {
 		);
 		?>
 		<input type="radio" id="toutes" name="filtre-categorie" value="toutes" checked>
-		<label for="toutes" class="toutes">Toutes les actualités</label>
+		<label for="toutes" class="toutes">Toutes</label>
 		<?php
 		foreach($terms as $term) : 
 			$pictos=$classe='';
