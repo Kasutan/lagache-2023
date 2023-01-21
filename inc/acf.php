@@ -262,6 +262,16 @@ class BE_ACF_Customizations {
 			false,
 			array('equipe','collaborateur')
 		);
+
+		/*********Bloc produits ***************/
+		$this->helper_register_block_type( 
+			'produits',
+			'Bloc groupe de prouits',
+			'Section avec nom et image principale pour un groupe de prouits, et volet escamotable pour afficher plus de photos.',
+			'carrot', 
+			true, //volets escamotables
+			array('produit')
+		);
 	}
 }
 new BE_ACF_Customizations();

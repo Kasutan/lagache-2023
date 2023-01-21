@@ -1,0 +1,91 @@
+.produits {
+  margin: 0 auto 1rem;
+  max-width: 750px;
+}
+.produits .image-principale {
+  height: 26rem;
+}
+.produits .image-principale, .produits .image-principale .titre, .produits .image-principale button {
+  position: relative;
+}
+.produits .image-principale .image {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.produits .image-principale .image img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.produits .image-principale .titre {
+  color: var(--blanc);
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+}
+.produits .image-principale button {
+  bottom: 2.1rem;
+  position: absolute;
+  right: 2.5rem;
+  --size:4.6rem;
+  background-color: transparent;
+  background-image: url("bouton.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: transparent;
+  display: block;
+  height: var(--size);
+  margin-bottom: 0;
+  transition: transform var(--transition);
+  width: var(--size);
+}
+.produits .image-principale button[aria-expanded=true] {
+  transform: rotate(90deg);
+}
+.produits .autres-photos {
+  --nb:2;
+  display: grid;
+  grid-template-columns: repeat(var(--nb), 1fr);
+}
+.produits .autres-photos.js-show {
+  height: 0;
+  overflow: 0;
+}
+.produits .autres-photos .produit {
+  align-items: flex-end;
+  display: flex;
+  height: 15rem;
+}
+.produits .autres-photos .produit, .produits .autres-photos .produit .nom {
+  position: relative;
+}
+.produits .autres-photos .produit .photo {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.produits .autres-photos .produit .photo img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.produits .autres-photos .produit .nom {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--blanc);
+  font-size: calc(16 * var(--taille-texte) / 15);
+  font-weight: normal;
+  margin-bottom: 0;
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .produits .autres-photos {
+    --nb:3;
+  }
+}
