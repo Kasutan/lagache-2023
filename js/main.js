@@ -36,7 +36,14 @@
 		$(siteHeader).addClass('js-sticky');
 		siteContent.css('margin-top',siteHeader.outerHeight());
 
+		/****************** Helpers formulaire *************************/	
 		
+		var colForm=$('.forminator-col.pleine-largeur');
+		if(colForm.length > 0) {
+			$(colForm).each(function(index) {
+				$(this).parent('.forminator-row').addClass('pleine-largeur');
+			});
+		}
 		
 
 	}); //fin document ready

@@ -184,12 +184,9 @@ function ea_has_action( $hook ) {
 function mc_adresse_email($atts) {
 	extract( shortcode_atts( array(    
 		'mail' => ' ',
-		'label' => ' '
 		), $atts) );
-			$label=wp_kses_post($label);
-			$mail=sanitize_email($mail);
 	
-			return sprintf('<a href="mailto:%s">%s</a>',antispambot($mail),$label);
+			return sprintf('<a href="mailto:%s">%s</a>',antispambot($mail),antispambot($mail));
 		}
 		
 add_shortcode( 'adresse-email', 'mc_adresse_email' );

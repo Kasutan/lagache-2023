@@ -112,97 +112,149 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	background-color: var(--fond);
-	color: var(--gris);
-	border: 1px solid var(--orange);
-	outline-color:var(--orange);
-	min-height:4.1rem;
+	background-color: rgba(58,124,50,0.1);
+	color: var(--noir);
+	border: none;
+	outline-color:var(--vert);
+	min-height:1.7rem;
 	padding: 3px;
+	padding-left: 10px;
 	
 	&:focus {
 		outline:solid 1px;
-		outline-color:var(--orange);
+		outline-color:var(--vert);
 	}
 }
 
-
-select {
-	border: 1px solid var(--bordure);
-}
 
 textarea {
 	width: 100%;
 }
 
-.wpcf7-form {
-	margin-bottom: var(--margin-y-2);
-	label, .checkbox {
+
+.forminator-custom-form {
+	/*Layout*/
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 22px;
+
+	.forminator-row {
+		box-sizing: border-box;
+		margin: 0 !important;
+	}
+	.forminator-col {
+		padding:0 !important;
+	}
+	.forminator-response-message, .forminator-row.pleine-largeur {
+		grid-column-start: 1;
+		grid-column-end: -1;
+	}
+	.forminator-error-message {
+		@include fs(12);
+		color:var(--rouge);
+	}
+
+	/*Styles communs à tous les champs*/
+	@include fs(14);
+
+
+	label {
 		display: block;
-		margin-bottom: 2rem;
-		label {
-			margin-bottom: 0;
-		}
+		margin-bottom: 5px;
 	}
 	input[type="text"],
 	input[type="email"],
-	textarea {
-		display: block;
-		margin-top: 3px;
+	input[type="tel"] {
 		width:100%;
 	}
 
-	small {
-		color:#828282;
-		@include fs(10);
-		font-weight: 300;
+
+	/*Styles des champs téléphone*/
+
+	.forminator-phone {
+		width:100%;
 	}
 
-	.wpcf7-spinner {
-		margin-right: 0;
-	}
-	.spinner-spacer {
-		width:48px;
-	}
+	/*Styles des champs radio*/
 
-	@include bp(md) {
-		.row {
-			column-gap:3rem;
-			display: grid;
-			grid-template-columns: 1fr 1fr;
+	.forminator-field[role="radiogroup"] {
+		--couleur:var(--vert);
+		--size:15px;
+		display: flex;
+		
+		label {
+			margin-bottom: 0;
+		}
+		
+		.forminator-label {
+			margin-right: 20px;
+		}
+		.forminator-radio-inline {
+			align-items: center;
+			display: flex;
+			flex-direction: row;
+			margin-right: 40px;
+		}
+		
+		.forminator-radio-bullet {
+			align-items:center;
+			display: contents;
+			&::after {
+				align-items: center;
+				background-color: rgba(196, 196, 196, 0.1);
+				border: 1px solid var(--vert);
+				color:var(--vert);
+				content:' ';
+				display: flex;
+				margin-right: 5px;
+				width:var(--size);
+				height:var(--size);
+			}
+		
+		}
+		input:checked + .forminator-radio-bullet::after {
+			content:'✔';
+		}
+		input:focus-visible + .forminator-radio-bullet::after {
+			outline: dotted 2px var(--vert);
+			outline-offset: 1px;
 		}
 	}
 
-	//custom checkboxes
-	//https://moderncss.dev/pure-css-custom-checkbox-style/
-	
-	input[type="checkbox"] {
-		appearance: none;
-		background-color: var(--fond);
-		display: inline-grid;
-		place-content: center;
-		margin: 0;
-		font: inherit;
-		color: currentColor;
-		width: 1.5rem;
-		height: 1.5rem;
-		border: 1px solid var(--orange);
-		border-radius: 0;
-		transform:translateY(-2px);
-
-		&::before {
-			content: "";
-			display: inline-block;
-			width: 0.65em;
-			height: 0.65em;
-			transform: scale(0);
-			transition: 120ms transform ease-in-out;
-			box-shadow: inset 1em 1em var(--orange);
-		}
-
-		&:checked::before {
-			transform: scale(1);
+	.forminator-row-last
+	{
+		grid-column: 1 / span 2;
+		.forminator-field {
+			display: flex;
+			justify-content: flex-end;
 		}
 	}
+
+	/*Styles du champ file upload*/
+	.file {
+		.forminator-label {
+			color:var(--rouge);
+			@include fs(20);
+			font-weight: 700;
+		}
+		.forminator-input-file  {
+			@include fs(16);
+		}
+	}
+	.forminator-uploaded-file--content {
+		margin: 20px 0;
+		background: var(--fond);
+		display: flex;
+		justify-content: space-between;
+		padding: 10px;
+		.forminator-uploaded-file--image {
+			display: none;
+		}
+		button {
+			min-width: unset;
+		}
+	}
+
 	
 }
 

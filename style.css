@@ -1055,12 +1055,13 @@ input[type=datetime],
 input[type=datetime-local],
 input[type=color],
 textarea {
-  background-color: var(--fond);
-  color: var(--gris);
-  border: 1px solid var(--orange);
-  outline-color: var(--orange);
-  min-height: 4.1rem;
+  background-color: rgba(58, 124, 50, 0.1);
+  color: var(--noir);
+  border: none;
+  outline-color: var(--vert);
+  min-height: 1.7rem;
   padding: 3px;
+  padding-left: 10px;
 }
 input[type=text]:focus,
 input[type=email]:focus,
@@ -1079,78 +1080,117 @@ input[type=datetime-local]:focus,
 input[type=color]:focus,
 textarea:focus {
   outline: solid 1px;
-  outline-color: var(--orange);
-}
-
-select {
-  border: 1px solid var(--bordure);
+  outline-color: var(--vert);
 }
 
 textarea {
   width: 100%;
 }
 
-.wpcf7-form {
-  margin-bottom: var(--margin-y-2);
+.forminator-custom-form {
+  /*Layout*/
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  /*Styles communs à tous les champs*/
+  font-size: calc(14 * var(--taille-texte) / 15);
+  /*Styles des champs téléphone*/
+  /*Styles des champs radio*/
+  /*Styles du champ file upload*/
 }
-.wpcf7-form label, .wpcf7-form .checkbox {
+.forminator-custom-form .forminator-row {
+  box-sizing: border-box;
+  margin: 0 !important;
+}
+.forminator-custom-form .forminator-col {
+  padding: 0 !important;
+}
+.forminator-custom-form .forminator-response-message, .forminator-custom-form .forminator-row.pleine-largeur {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+.forminator-custom-form .forminator-error-message {
+  font-size: calc(12 * var(--taille-texte) / 15);
+  color: var(--rouge);
+}
+.forminator-custom-form label {
   display: block;
-  margin-bottom: 2rem;
+  margin-bottom: 5px;
 }
-.wpcf7-form label label, .wpcf7-form .checkbox label {
-  margin-bottom: 0;
-}
-.wpcf7-form input[type=text],
-.wpcf7-form input[type=email],
-.wpcf7-form textarea {
-  display: block;
-  margin-top: 3px;
+.forminator-custom-form input[type=text],
+.forminator-custom-form input[type=email],
+.forminator-custom-form input[type=tel] {
   width: 100%;
 }
-.wpcf7-form small {
-  color: #828282;
-  font-size: calc(10 * var(--taille-texte) / 15);
-  font-weight: 300;
+.forminator-custom-form .forminator-phone {
+  width: 100%;
 }
-.wpcf7-form .wpcf7-spinner {
-  margin-right: 0;
+.forminator-custom-form .forminator-field[role=radiogroup] {
+  --couleur:var(--vert);
+  --size:15px;
+  display: flex;
 }
-.wpcf7-form .spinner-spacer {
-  width: 48px;
+.forminator-custom-form .forminator-field[role=radiogroup] label {
+  margin-bottom: 0;
 }
-@media (min-width: 768px) {
-  .wpcf7-form .row {
-    column-gap: 3rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+.forminator-custom-form .forminator-field[role=radiogroup] .forminator-label {
+  margin-right: 20px;
 }
-.wpcf7-form input[type=checkbox] {
-  -webkit-appearance: none;
-          appearance: none;
-  background-color: var(--fond);
-  display: inline-grid;
-  place-content: center;
-  margin: 0;
-  font: inherit;
-  color: currentColor;
-  width: 1.5rem;
-  height: 1.5rem;
-  border: 1px solid var(--orange);
-  border-radius: 0;
-  transform: translateY(-2px);
+.forminator-custom-form .forminator-field[role=radiogroup] .forminator-radio-inline {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin-right: 40px;
 }
-.wpcf7-form input[type=checkbox]::before {
-  content: "";
-  display: inline-block;
-  width: 0.65em;
-  height: 0.65em;
-  transform: scale(0);
-  transition: 120ms transform ease-in-out;
-  box-shadow: inset 1em 1em var(--orange);
+.forminator-custom-form .forminator-field[role=radiogroup] .forminator-radio-bullet {
+  align-items: center;
+  display: contents;
 }
-.wpcf7-form input[type=checkbox]:checked::before {
-  transform: scale(1);
+.forminator-custom-form .forminator-field[role=radiogroup] .forminator-radio-bullet::after {
+  align-items: center;
+  background-color: rgba(196, 196, 196, 0.1);
+  border: 1px solid var(--vert);
+  color: var(--vert);
+  content: " ";
+  display: flex;
+  margin-right: 5px;
+  width: var(--size);
+  height: var(--size);
+}
+.forminator-custom-form .forminator-field[role=radiogroup] input:checked + .forminator-radio-bullet::after {
+  content: "✔";
+}
+.forminator-custom-form .forminator-field[role=radiogroup] input:focus-visible + .forminator-radio-bullet::after {
+  outline: dotted 2px var(--vert);
+  outline-offset: 1px;
+}
+.forminator-custom-form .forminator-row-last {
+  grid-column: 1/span 2;
+}
+.forminator-custom-form .forminator-row-last .forminator-field {
+  display: flex;
+  justify-content: flex-end;
+}
+.forminator-custom-form .file .forminator-label {
+  color: var(--rouge);
+  font-size: calc(20 * var(--taille-texte) / 15);
+  font-weight: 700;
+}
+.forminator-custom-form .file .forminator-input-file {
+  font-size: calc(16 * var(--taille-texte) / 15);
+}
+.forminator-custom-form .forminator-uploaded-file--content {
+  margin: 20px 0;
+  background: var(--fond);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.forminator-custom-form .forminator-uploaded-file--content .forminator-uploaded-file--image {
+  display: none;
+}
+.forminator-custom-form .forminator-uploaded-file--content button {
+  min-width: unset;
 }
 
 /*--------------------------------------------------------------
