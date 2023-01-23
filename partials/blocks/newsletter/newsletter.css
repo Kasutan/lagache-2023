@@ -68,6 +68,9 @@
   color: var(--blanc);
   text-align: center;
 }
+.newsletter .forminator-custom-form .forminator-row-last {
+  grid-column: unset;
+}
 @media screen and (max-width: 500px) {
   .newsletter .titre-section.h1 {
     text-decoration: none;

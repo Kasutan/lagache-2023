@@ -1140,7 +1140,7 @@ textarea {
   align-items: center;
   display: flex;
   flex-direction: row;
-  margin-right: 40px;
+  margin-right: 20px;
 }
 .forminator-custom-form .forminator-field[role=radiogroup] .forminator-radio-bullet {
   align-items: center;
