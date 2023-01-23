@@ -287,7 +287,7 @@ function kasutan_actus_banniere() {
 function kasutan_affiche_thumbnail_dans_contenu() {
 	if(has_post_thumbnail()) {
 		echo '<div class="thumbnail">';
-			the_post_thumbnail( 'medium_large');
+			the_post_thumbnail( 'large');
 		echo '</div>';
 	}
 }
