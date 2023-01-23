@@ -1804,6 +1804,18 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
   }
 }
 /*--------------------------------------------------------------
+## Ancre pour backtotop
+--------------------------------------------------------------*/
+#main-content {
+  position: relative;
+}
+
+#haut-page {
+  position: relative;
+  top: -200px;
+}
+
+/*--------------------------------------------------------------
 ## Entry-header
 --------------------------------------------------------------*/
 .page-banniere {
@@ -1836,6 +1848,7 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
   background-repeat: no-repeat;
   color: var(--blanc);
   padding: 2.5rem var(--padding-x) 1rem;
+  position: relative;
   --largeur-col: 27rem;
 }
 .site-footer .col {
@@ -1920,6 +1933,39 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
 .site-footer .copyright .sep {
   display: inline-block;
   margin: 0 4px;
+}
+.site-footer .backtotop {
+  --taille:40px;
+  align-items: center;
+  background-color: var(--vert);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  height: var(--taille);
+  padding: 8px;
+  width: var(--taille);
+  top: var(--taille);
+  position: absolute;
+  right: 10px;
+  top: calc(-10px - var(--taille));
+  transition: all var(--transition);
+  z-index: 1;
+}
+.site-footer .backtotop svg {
+  position: relative;
+  top: -2px;
+  transform-origin: center;
+  transform: rotateZ(180deg);
+}
+.site-footer .backtotop svg path {
+  fill: var(--blanc);
+}
+.site-footer .backtotop:hover, .site-footer .backtotop:focus {
+  background-color: var(--orange);
+  border: none;
+}
+.site-footer .backtotop:hover svg path, .site-footer .backtotop:focus svg path {
+  fill: var(--blanc);
 }
 
 .loop {

@@ -54,4 +54,4 @@ echo '<div class="site-container">';
 		tha_header_bottom();
 	echo '</header>';
 	tha_header_after();
-	printf('<div class="%s" id="main-content">',apply_filters('kasutan_site_inner_class','site-inner'));
+	printf('<div class="%s" id="main-content"><span id="haut-page"></span>',apply_filters('kasutan_site_inner_class','site-inner'));

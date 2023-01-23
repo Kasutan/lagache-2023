@@ -8,7 +8,7 @@
 	@include decor-xl;
 	color: var(--blanc);
 	padding: 2.5rem var(--padding-x) 1rem;
-
+	position: relative;
 	--largeur-col: 27rem;
 	.col {
 		margin-bottom: 2rem;
@@ -113,6 +113,45 @@
 		}
 
 		
+	}
+
+	.backtotop {
+		--taille:40px;
+		align-items: center;
+		background-color: var(--vert);
+		border:none;
+		border-radius: 50%;
+		display: flex;
+		height:var(--taille);
+		padding:8px;
+		width:var(--taille);
+		top : var(--taille);
+		position: absolute;
+		right:10px;
+		top : calc(-10px - var(--taille));
+		transition: all var(--transition);
+		z-index:1;
+
+		svg {
+			position: relative;
+			top:-2px;
+			transform-origin: center;
+			transform: rotateZ(180deg);
+			path {
+				fill : var(--blanc);
+			}
+		}
+
+		&:hover, &:focus {
+			background-color:var(--orange);
+			border:none;
+			//transform : translateY(-0.5rem);
+			svg {
+				path {
+					fill : var(--blanc);
+				}
+			}
+		}
 	}
 
 }
