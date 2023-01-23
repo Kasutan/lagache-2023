@@ -274,6 +274,10 @@ button.menu-toggle {
 		column-gap:5px;
 		li {
 			padding:0;
+
+			&.disable > a {
+				cursor:default;
+			}
 		}
 
 		a {
@@ -374,7 +378,9 @@ button.menu-toggle {
 				}
 			}
 			li.current-menu-item a {
-				background-color: var(--orange);
+				background-color: var(--rouge);
+				color:var(--blanc);
+
 			}
 		}
 	}

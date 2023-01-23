@@ -1486,6 +1486,9 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
 .nav-main .menu li {
   padding: 0;
 }
+.nav-main .menu li.disable > a {
+  cursor: default;
+}
 .nav-main .menu a {
   color: var(--vert);
   display: block;
@@ -1564,7 +1567,8 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
   background-color: var(--vert);
 }
 .nav-main .menu .sub-menu li.current-menu-item a {
-  background-color: var(--orange);
+  background-color: var(--rouge);
+  color: var(--blanc);
 }
 
 /*Animations*/

@@ -26,6 +26,13 @@
 			});
 		}
 		
+		/********* Désactiver certains liens parents en desktop **********/
+		if(width >= 960 ) {
+			$('.disable.menu-item-has-children > a').click(function(e) {
+				e.preventDefault();
+			})
+		}
+
 
 		/****************** Sticky header *************************/
 		
