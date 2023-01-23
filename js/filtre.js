@@ -1,7 +1,6 @@
 (function($) {
 
 	$( document ).ready(function() {
-		console.log('js filtre');
 		/*--------------------------------------------------------------
 		# Filtrer archives par catégorie
 		--------------------------------------------------------------*/
@@ -24,17 +23,18 @@
 				function(){
 					//callback de l'animation
 					var selected_value = $("input[name='filtre-categorie']:checked").val();
-					console.log('filtre changé : ',encodeURI(selected_value));
+
 					if(selected_value=='toutes') {
 						listePosts.filter();
 						localStorage.removeItem('filtreBlog');
-
+						updateURL('')
 					} else {
 						listePosts.filter(function(item) {
 							return (item.values().categorie.indexOf(selected_value)>=0);
 						});
 						
 						localStorage.setItem('filtreBlog',selected_value);
+						updateURL(selected_value);
 						
 					}
 					//la nouvelle liste est prête, nouvelle animation pour réafficher
@@ -89,6 +89,21 @@
 					}, 500);
 			});
 		}
+
+		//Mettre à jour l'url de la page
+		function updateURL(value) {
+			var url = new URL(window.location.href); //objet url à partir de l'url de la fenêtre actuelle
+			if(value) {
+				urlParams.set('filtre_cat',encodeURI(value));
+			} else {
+				urlParams.delete('filtre_cat');
+			}
+			url.search = urlParams.toString(); //on ajoute ces paramètres à notre objet url tout neuf
+			var new_url = url.toString(); // on convertit l'ensemble en chaine
+			history.pushState({pageID: 'Lagache'}, 'Lagache', new_url); //on stocke dans l'historique
+		}
+		
+
 	}); //fin document ready
 })( jQuery );
 
