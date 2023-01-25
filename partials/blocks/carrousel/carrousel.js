@@ -14,6 +14,7 @@
 			owl.owlCarousel({
 				loop:true,
 				nav : false,
+				navText:['<span><<span class="screen-reader-text"> Article précédent</span></span>','<span><span class="screen-reader-text">Article suivant </span>></span>'],
 				dots : true,
 				autoplay:true,
 				autoplayTimeout:5000,
@@ -47,6 +48,9 @@
 		function accessibleNav(e) {
 			$('.owl-dot span').addClass('screen-reader-text');
 			$('.owl-dot span').html('Afficher le groupe de logos suivant');
+			//Role incorrect d'après Axe
+			$('.owl-nav button').removeAttr('role');
+
 		}
 	}); //fin document ready
 })( jQuery );

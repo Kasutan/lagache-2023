@@ -11,13 +11,21 @@
 			owl.owlCarousel({
 				loop:true,
 				nav : true,
+				navText:['<span><<span class="screen-reader-text"> Article précédent</span></span>','<span><span class="screen-reader-text">Article suivant </span>></span>'],
 				dots : false,
 				autoplay:true,
 				autoplayTimeout:4000,
 				autoplaySpeed:2000,
 				autoplayHoverPause:true,
-				items:1
+				items:1,
+				onInitialized : removeAttr,
 			});
+		}
+
+		function removeAttr(event) {
+			//Role incorrect d'après Axe
+			$('.owl-nav button').removeAttr('role');
+
 		}
 		
 	}); //fin document ready
