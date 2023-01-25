@@ -25,7 +25,7 @@ $cote_image=esc_attr( get_field('cote_image') );
 printf('<section class="acf colonnes-decor %s %s %s">', $className,$couleur,$cote_image);
 	
 	echo '<div class="decor">';
-		include_once('decor-xl.php');
+		include('decor-xl.php');
 	echo '</div>';
 	if(function_exists('kasutan_affiche_decor_svg')) {
 		//kasutan_affiche_decor_svg('decor-xl');
