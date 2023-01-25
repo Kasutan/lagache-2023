@@ -34,7 +34,7 @@ printf('<section class="acf intro-produits %s has-%s-background-color">', $class
 			if(!empty($lien['target']) && esc_attr($lien['target'])==='_blank') {
 				$target_atts='target="_blank" rel="noopener noreferrer"';
 			}
-			printf('<a href="%s" class="bouton blanc has-%s-color" target="%s" rel="noopener noreferrer">%s</a>',
+			printf('<a href="%s" class="bouton blanc has-%s-color" %s>%s</a>',
 				esc_url($lien['url']),
 				$couleur,
 				$target_atts,

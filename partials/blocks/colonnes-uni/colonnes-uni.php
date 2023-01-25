@@ -33,7 +33,7 @@ printf('<section class="acf colonnes-uni %s %s %s">', $className,$couleur,$cote_
 				$target_atts='target="_blank" rel="noopener noreferrer"';
 			}
 
-			printf('<a href="%s" class="bouton blanc has-%s-color" target="%s" rel="noopener noreferrer">%s</a>',
+			printf('<a href="%s" class="bouton blanc has-%s-color" %s>%s</a>',
 				esc_url($lien['url']),
 				$couleur,
 				$target_atts,
