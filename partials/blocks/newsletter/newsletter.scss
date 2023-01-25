@@ -51,8 +51,14 @@
 		color:var(--blanc);
 		text-align: center;
 	}
+	.forminator-custom-form {
+		display: block;
+	}
 	.forminator-custom-form .forminator-row-last {
 		grid-column: unset;
+		.forminator-field {
+			justify-content: center;
+		}
 	}
 	@media screen and (max-width:500px) {
 		.titre-section.h1 {
@@ -72,7 +78,7 @@
 				display: block;
 			}
 		}
-		.form-wrap form {
+		.form-wrap .forminator-custom-form {
 			column-gap:36px;
 			display: grid;
 			grid-template-columns: 1fr 14rem;

@@ -68,8 +68,14 @@
   color: var(--blanc);
   text-align: center;
 }
+.newsletter .forminator-custom-form {
+  display: block;
+}
 .newsletter .forminator-custom-form .forminator-row-last {
   grid-column: unset;
+}
+.newsletter .forminator-custom-form .forminator-row-last .forminator-field {
+  justify-content: center;
 }
 @media screen and (max-width: 500px) {
   .newsletter .titre-section.h1 {
@@ -86,7 +92,7 @@
   .newsletter .image.desktop {
     display: block;
   }
-  .newsletter .form-wrap form {
+  .newsletter .form-wrap .forminator-custom-form {
     column-gap: 36px;
     display: grid;
     grid-template-columns: 1fr 14rem;

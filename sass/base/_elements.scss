@@ -181,6 +181,7 @@ textarea {
 		--couleur:var(--vert);
 		--size:15px;
 		display: flex;
+		flex-wrap: wrap;
 		
 		label {
 			margin-bottom: 0;
