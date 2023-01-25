@@ -28,10 +28,15 @@ printf('<section class="acf colonnes-uni %s %s %s">', $className,$couleur,$cote_
 		if($texte) printf('<div class="texte has-blanc-color">%s</div>',$texte);
 
 		if(!empty($lien)) {
+			$target_atts='';
+			if(!empty($lien['target']) && esc_attr($lien['target'])==='_blank') {
+				$target_atts='target="_blank" rel="noopener noreferrer"';
+			}
+
 			printf('<a href="%s" class="bouton blanc has-%s-color" target="%s" rel="noopener noreferrer">%s</a>',
 				esc_url($lien['url']),
 				$couleur,
-				esc_attr($lien['target']),
+				$target_atts,
 				wp_kses_post( $lien['title'] )
 			);
 		}

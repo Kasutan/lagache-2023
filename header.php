@@ -13,6 +13,7 @@ tha_html_before();
 echo '<html ' . get_language_attributes() . '>';
 
 echo '<head>';
+	echo '<meta charset="' . get_bloginfo( 'charset' ) . '">'; // En premier pour validité HTML W3C
 	tha_head_top();
 	wp_head();
 	tha_head_bottom();

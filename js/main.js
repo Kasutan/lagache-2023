@@ -51,6 +51,17 @@
 				$(this).parent('.forminator-row').addClass('pleine-largeur');
 			});
 		}
+
+		//Supprimer les attributs aria-describedby qui pointent vers des éléments inexistants
+		var inputsAvecAria=$('input[aria-describedby]');
+		if(inputsAvecAria.length > 0) {
+			$(inputsAvecAria).each(function() {
+				var cible=$(this).attr('aria-describedby');
+				if($('#'+cible).length === 0) {
+					$(this).removeAttr('aria-describedby');
+				}
+			});
+		}
 		
 
 	}); //fin document ready

@@ -219,3 +219,9 @@ function kasutan_make_list($text) {
 	return ob_get_clean();
 }
 
+/**
+* Formater un numéro de téléphone.
+*/
+function kasutan_formate_tel($tel) {
+	return str_replace(array(' ','(0)'),'',$tel);
+}

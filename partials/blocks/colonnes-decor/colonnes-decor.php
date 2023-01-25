@@ -23,9 +23,12 @@ $couleur=esc_attr( get_field('couleur') );
 $cote_image=esc_attr( get_field('cote_image') );
 
 printf('<section class="acf colonnes-decor %s %s %s">', $className,$couleur,$cote_image);
-
+	
+	echo '<div class="decor">';
+		include_once('decor-xl.php');
+	echo '</div>';
 	if(function_exists('kasutan_affiche_decor_svg')) {
-		kasutan_affiche_decor_svg('decor-xl');
+		//kasutan_affiche_decor_svg('decor-xl');
 	}
 	
 	echo '<div class="col-texte">';
@@ -33,10 +36,14 @@ printf('<section class="acf colonnes-decor %s %s %s">', $className,$couleur,$cot
 		if($texte) printf('<div class="texte">%s</div>',$texte);
 
 		if(!empty($lien)) {
-			printf('<a href="%s" class="bouton %s" target="%s" rel="noopener noreferrer">%s</a>',
+			$target_atts='';
+			if(!empty($lien['target']) && esc_attr($lien['target'])==='_blank') {
+				$target_atts='target="_blank" rel="noopener noreferrer"';
+			}
+			printf('<a href="%s" class="bouton %s" %s>%s</a>',
 				esc_url($lien['url']),
 				$couleur,
-				esc_attr($lien['target']),
+				$target_atts,
 				wp_kses_post( $lien['title'] )
 			);
 		}

@@ -36,7 +36,6 @@ add_filter( 'http_request_args', 'ea_dont_update_theme', 5, 2 );
  *
  */
 function ea_header_meta_tags() {
-	echo '<meta charset="' . get_bloginfo( 'charset' ) . '">';
 	echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
 	echo '<link rel="profile" href="http://gmpg.org/xfn/11">';
 	echo '<link rel="pingback" href="' . get_bloginfo( 'pingback_url' ) . '">';
@@ -268,5 +267,8 @@ function kasutan_disable_editor_fullscreen_by_default() {
 add_action( 'enqueue_block_editor_assets', 'kasutan_disable_editor_fullscreen_by_default' );
 
 
-//Disable CF7 auto p
-add_filter( 'wpcf7_autop_or_not', '__return_false' );
+//Disable Core block supports inline CSS (génère erreur validation html)
+//https://wordpress.org/support/topic/core-block-supports-inline-css/
+add_action('wp_footer', function () {
+	wp_dequeue_style('core-block-supports');
+});
