@@ -27,6 +27,12 @@
 		display: none;
 	}
 
+	&.rouge {
+		ul:not([class]) li::before {
+					color:var(--rouge);
+		}
+	}
+
 	@include bp(sm) {
 		align-items: center;
 		display: grid;

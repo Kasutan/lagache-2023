@@ -10,6 +10,9 @@
 		flex-direction: column;
 		padding:0 var(--padding-x) 15px;
 	}
+	ul:not([class]) li::before {
+		color:var(--blanc);
+	}
 	.image {
 		width:100%;
 		img {

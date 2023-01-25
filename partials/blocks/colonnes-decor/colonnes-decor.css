@@ -32,6 +32,9 @@
 .colonnes-decor .decor {
   display: none;
 }
+.colonnes-decor.rouge ul:not([class]) li::before {
+  color: var(--rouge);
+}
 @media (min-width: 500px) {
   .colonnes-decor {
     align-items: center;
