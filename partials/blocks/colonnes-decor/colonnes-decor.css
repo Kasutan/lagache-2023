@@ -32,7 +32,7 @@
 .colonnes-decor .decor {
   display: none;
 }
-.colonnes-decor.rouge ul:not([class]) li::before {
+.colonnes-decor.rouge ul:not([class]) li::marker {
   color: var(--rouge);
 }
 @media (min-width: 500px) {

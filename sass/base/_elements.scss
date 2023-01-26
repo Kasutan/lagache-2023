@@ -18,13 +18,19 @@ hr {
 }
 
 .entry-content ul:not([class]) {
+	list-style: square;
 	li {
 		margin-bottom: 1em;
-		&::before {
-			content: '■';
-			color:var(--vert);
+		/*&::before {
+			background-color: var(--vert);
+			content: ' ';
 			display: inline-block;
+			height: 5px;
 			margin-right: 4px;
+			width: 5px;
+		}*/
+		&::marker {
+			color: var(--vert);
 		}
 	}
 }
@@ -168,6 +174,9 @@ textarea {
 		width:100%;
 	}
 
+	input[type="radio"] {
+		@include screen-reader-text;
+	}
 
 	/*Styles des champs téléphone*/
 

@@ -28,7 +28,7 @@
 	}
 
 	&.rouge {
-		ul:not([class]) li::before {
+		ul:not([class]) li::marker {
 					color:var(--rouge);
 		}
 	}

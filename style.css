@@ -50,7 +50,6 @@ button, input, textarea {
 input[type=radio] {
   -webkit-appearance: none;
   appearance: none;
-  display: none;
 }
 
 /*Pour la checkbox do not track Matomo*/
@@ -964,14 +963,22 @@ hr {
   margin-bottom: 1.5em;
 }
 
+.entry-content ul:not([class]) {
+  list-style: square;
+}
 .entry-content ul:not([class]) li {
   margin-bottom: 1em;
+  /*&::before {
+  	background-color: var(--vert);
+  	content: ' ';
+  	display: inline-block;
+  	height: 5px;
+  	margin-right: 4px;
+  	width: 5px;
+  }*/
 }
-.entry-content ul:not([class]) li::before {
-  content: "■";
+.entry-content ul:not([class]) li::marker {
   color: var(--vert);
-  display: inline-block;
-  margin-right: 4px;
 }
 
 /*
@@ -1121,6 +1128,20 @@ textarea {
 .forminator-custom-form input[type=email],
 .forminator-custom-form input[type=tel] {
   width: 100%;
+}
+.forminator-custom-form input[type=radio] {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 .forminator-custom-form .forminator-phone {
   width: 100%;

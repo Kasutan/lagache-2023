@@ -16,7 +16,7 @@
   flex-direction: column;
   padding: 0 var(--padding-x) 15px;
 }
-.colonnes-uni ul:not([class]) li::before {
+.colonnes-uni ul:not([class]) li::marker {
   color: var(--blanc);
 }
 .colonnes-uni .image {

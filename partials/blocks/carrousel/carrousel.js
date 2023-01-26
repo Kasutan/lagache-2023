@@ -14,7 +14,7 @@
 			owl.owlCarousel({
 				loop:true,
 				nav : false,
-				navText:['<span><<span class="screen-reader-text"> Article précédent</span></span>','<span><span class="screen-reader-text">Article suivant </span>></span>'],
+				navText:['<span><span class="screen-reader-text"> Article précédent</span></span>','<span><span class="screen-reader-text">Article suivant <span></span>'],
 				dots : true,
 				autoplay:true,
 				autoplayTimeout:5000,

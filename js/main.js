@@ -27,11 +27,13 @@
 		}
 		
 		/********* Désactiver certains liens parents en desktop **********/
+		//NON car ils continuent de recevoir le focus et d'être lus par les lecteurs d'écrans
+		/*
 		if(width >= 960 ) {
 			$('.disable.menu-item-has-children > a').click(function(e) {
 				e.preventDefault();
 			})
-		}
+		}*/
 
 
 		/****************** Sticky header *************************/

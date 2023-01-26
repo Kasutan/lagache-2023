@@ -10,7 +10,7 @@
 		flex-direction: column;
 		padding:0 var(--padding-x) 15px;
 	}
-	ul:not([class]) li::before {
+	ul:not([class]) li::marker {
 		color:var(--blanc);
 	}
 	.image {
