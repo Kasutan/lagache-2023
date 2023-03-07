@@ -51,12 +51,13 @@ p.fil-ariane {
 	display:flex;
 	color:var(--rouge);
 	flex-wrap: wrap;
+	font-weight: 700;
 	@include fs(12);
 	margin-top: 14px;
 	text-transform: uppercase;
 	a {
 		color:var(--rouge);
-		font-weight: 400;
+		font-weight: 700;
 		text-decoration: none;
 		&:hover, &:focus {
 			text-decoration: underline;
@@ -66,8 +67,6 @@ p.fil-ariane {
 	.sep {
 		display: inline-block;
 		margin:0 0.5ch;
-		position: relative;
-		top:1px;
 	}
 }
 /*--------------------------------------------------------------

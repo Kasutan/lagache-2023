@@ -1308,13 +1308,14 @@ p.fil-ariane {
   display: flex;
   color: var(--rouge);
   flex-wrap: wrap;
+  font-weight: 700;
   font-size: calc(12 * var(--taille-texte) / 15);
   margin-top: 14px;
   text-transform: uppercase;
 }
 p.fil-ariane a {
   color: var(--rouge);
-  font-weight: 400;
+  font-weight: 700;
   text-decoration: none;
 }
 p.fil-ariane a:hover, p.fil-ariane a:focus {
@@ -1323,8 +1324,6 @@ p.fil-ariane a:hover, p.fil-ariane a:focus {
 p.fil-ariane .sep {
   display: inline-block;
   margin: 0 0.5ch;
-  position: relative;
-  top: 1px;
 }
 
 /*--------------------------------------------------------------
