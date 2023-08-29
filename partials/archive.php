@@ -20,6 +20,10 @@ printf('<%s class="post-summary">',$tag);
 
 	echo '<div class="post-summary__content">';
 		ea_entry_category('archive');
+
+		if(function_exists('kasutan_cat_pour_filtre')) {
+			kasutan_cat_pour_filtre();
+		}
 		
 		ea_post_summary_title();
 

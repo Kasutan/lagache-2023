@@ -26,8 +26,7 @@ function ea_entry_category($contexte='archive') {
 			if($picto) {
 				printf('<div class="picto-cat">%s</div>',wp_get_attachment_image( $picto,'thumbnail'));
 			}
-			//pour le filtre
-			printf('<span class="categorie screen-reader-text">%s</span>',$term->slug);
+		
 		} else {
 			//contexte single
 			
@@ -38,6 +37,24 @@ function ea_entry_category($contexte='archive') {
 		
 }
 
+/**
+ * Liste des catégories séparées par des espaces pour le filtre
+ *
+ */
+
+function kasutan_cat_pour_filtre() {
+	$terms = get_the_terms( get_the_ID(), 'category');
+	if( empty( $terms ) || is_wp_error( $terms ) ) {
+		return '';
+	}
+
+	$slugs=array();
+	foreach($terms as $term) {
+		$slugs[]=$term->slug;
+	}
+
+	printf('<span class="categorie screen-reader-text">%s</span>',implode(' ',$slugs));
+}
 
 /**
 * Picto associé à une catégorie
