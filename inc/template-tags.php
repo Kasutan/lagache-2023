@@ -258,7 +258,7 @@ function kasutan_page_banniere($page_id=false,$use_defaut=false) {
 
 	if(!empty($image_id)) {
 		printf('<div class="page-banniere">');
-			echo wp_get_attachment_image( $image_id, 'banniere',false,array('decoding'=>'async','loading'=>'eager'));
+			echo wp_get_attachment_image( $image_id, 'full',false,array('decoding'=>'async','loading'=>'eager'));
 		echo '</div>';
 	}
 }

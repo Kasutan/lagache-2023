@@ -50,7 +50,7 @@ printf('<section class="acf colonnes-decor %s %s %s">', $className,$couleur,$cot
 	echo '</div>';
 	echo '<div class="col-image">';
 		echo '<div class="image">';
-			echo wp_get_attachment_image( $image_id, 'medium_large');
+			echo wp_get_attachment_image( $image_id, 'large');
 		echo '</div>';
 		if($bloc) {
 			printf('<p class="bloc has-%s-background-color">%s</p>',$couleur,$bloc);
