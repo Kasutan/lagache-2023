@@ -16,7 +16,7 @@ if(!empty($args) && array_key_exists('tag',$args)) {
 
 printf('<%s class="post-summary">',$tag);
 
-	ea_post_summary_image('medium');
+	ea_post_summary_image('medium_large');
 
 	echo '<div class="post-summary__content">';
 		ea_entry_category('archive');
