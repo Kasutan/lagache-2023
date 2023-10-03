@@ -213,7 +213,7 @@ button.menu-toggle {
 			text-transform: uppercase;
 		}
 
-		&.current-menu-item , &.current-menu-ancestor {
+		&.current-menu-item , &.current-menu-ancestor, &.current_page_parent {
 			background-color: var(--vert);
 			& > a {
 				color:var(--blanc);
@@ -307,7 +307,8 @@ button.menu-toggle {
 			}
 			
 
-			& > a:active, &.current-menu-item > a, &.current-menu-ancestor > a {
+			& > a:active, &.current-menu-item > a, &.current-menu-ancestor > a, 
+			&.current_page_parent > a {
 				background-color: var(--rouge);
 				color:var(--blanc);
 			}

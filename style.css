@@ -1463,13 +1463,13 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
   padding: 1rem 1.6rem;
   text-transform: uppercase;
 }
-.volet-navigation .menu-mobile > li.current-menu-item, .volet-navigation .menu-mobile > li.current-menu-ancestor {
+.volet-navigation .menu-mobile > li.current-menu-item, .volet-navigation .menu-mobile > li.current-menu-ancestor, .volet-navigation .menu-mobile > li.current_page_parent {
   background-color: var(--vert);
 }
-.volet-navigation .menu-mobile > li.current-menu-item > a, .volet-navigation .menu-mobile > li.current-menu-ancestor > a {
+.volet-navigation .menu-mobile > li.current-menu-item > a, .volet-navigation .menu-mobile > li.current-menu-ancestor > a, .volet-navigation .menu-mobile > li.current_page_parent > a {
   color: var(--blanc);
 }
-.volet-navigation .menu-mobile > li.current-menu-item button.ouvrir-sous-menu svg path, .volet-navigation .menu-mobile > li.current-menu-ancestor button.ouvrir-sous-menu svg path {
+.volet-navigation .menu-mobile > li.current-menu-item button.ouvrir-sous-menu svg path, .volet-navigation .menu-mobile > li.current-menu-ancestor button.ouvrir-sous-menu svg path, .volet-navigation .menu-mobile > li.current_page_parent button.ouvrir-sous-menu svg path {
   fill: var(--blanc);
 }
 .volet-navigation button.ouvrir-sous-menu {
@@ -1546,7 +1546,7 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
   background-color: var(--vert);
   color: var(--blanc);
 }
-.nav-main .menu > li > a:active, .nav-main .menu > li.current-menu-item > a, .nav-main .menu > li.current-menu-ancestor > a {
+.nav-main .menu > li > a:active, .nav-main .menu > li.current-menu-item > a, .nav-main .menu > li.current-menu-ancestor > a, .nav-main .menu > li.current_page_parent > a {
   background-color: var(--rouge);
   color: var(--blanc);
 }
