@@ -66,6 +66,8 @@
 }
 .newsletter .forminator-error-message, .newsletter .forminator-response-message {
   color: var(--blanc);
+  font-size: 2rem;
+  font-weight: 700;
   text-align: center;
 }
 .newsletter .forminator-custom-form {
