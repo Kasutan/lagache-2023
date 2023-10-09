@@ -236,8 +236,13 @@ textarea {
 		grid-column: 1 / span 2;
 		.forminator-field {
 			display: flex;
+			flex-wrap: wrap;
 			justify-content: flex-end;
 		}
+	}
+	.h-captcha {
+		flex-basis: 100%;
+		margin-bottom: 20px;
 	}
 
 	/*Styles du champ file upload*/

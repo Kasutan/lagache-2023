@@ -1199,7 +1199,12 @@ textarea {
 }
 .forminator-custom-form .forminator-row-last .forminator-field {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
+}
+.forminator-custom-form .h-captcha {
+  flex-basis: 100%;
+  margin-bottom: 20px;
 }
 .forminator-custom-form .file .forminator-label {
   color: var(--rouge);
