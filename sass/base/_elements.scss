@@ -17,20 +17,22 @@ hr {
 	margin-bottom: 1.5em;
 }
 
-.entry-content ul:not([class]) {
-	list-style: square;
-	li {
-		margin-bottom: 1em;
-		/*&::before {
-			background-color: var(--vert);
-			content: ' ';
-			display: inline-block;
-			height: 5px;
-			margin-right: 4px;
-			width: 5px;
-		}*/
-		&::marker {
-			color: var(--vert);
+.entry-content {
+	ul:not([class]), ul.wp-block-list {
+		list-style: square;
+		li {
+			margin-bottom: 1em;
+			/*&::before {
+				background-color: var(--vert);
+				content: ' ';
+				display: inline-block;
+				height: 5px;
+				margin-right: 4px;
+				width: 5px;
+			}*/
+			&::marker {
+				color: var(--vert);
+			}
 		}
 	}
 }

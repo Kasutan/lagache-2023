@@ -971,10 +971,10 @@ hr {
   margin-bottom: 1.5em;
 }
 
-.entry-content ul:not([class]) {
+.entry-content ul:not([class]), .entry-content ul.wp-block-list {
   list-style: square;
 }
-.entry-content ul:not([class]) li {
+.entry-content ul:not([class]) li, .entry-content ul.wp-block-list li {
   margin-bottom: 1em;
   /*&::before {
   	background-color: var(--vert);
@@ -985,7 +985,7 @@ hr {
   	width: 5px;
   }*/
 }
-.entry-content ul:not([class]) li::marker {
+.entry-content ul:not([class]) li::marker, .entry-content ul.wp-block-list li::marker {
   color: var(--vert);
 }
 
