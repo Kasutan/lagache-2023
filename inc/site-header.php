@@ -14,4 +14,13 @@ function kasutan_header_top() {
 		wp_kses_post( $lien['title'] )
 	);
 
+	if(KPLL) {
+		echo '<ul class="selecteur">';
+		pll_the_languages(array(
+			'show_flags'=> 1,
+			'hide_current'=>1
+		));
+		echo '</ul>';
+	}
+
 }

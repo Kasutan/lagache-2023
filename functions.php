@@ -9,6 +9,11 @@
 
 define( 'KASUTAN_STARTER_VERSION', filemtime( get_template_directory() . '/style.css' ) );
 
+if(function_exists('pll_the_languages')) {
+	define('KPLL',true);
+} else {
+	define('KPLL',false);
+}
 
 // General cleanup
 include_once( get_template_directory() . '/inc/wordpress-cleanup.php' );
