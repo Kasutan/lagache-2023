@@ -111,7 +111,7 @@
 		font-weight: 700;
 		padding:1rem;
 		position: absolute;
-		right:var(--padding-x-header);
+		right:calc(12rem + var(--padding-x-header));
 		text-decoration: none;
 		text-transform:uppercase;
 		top:0;
