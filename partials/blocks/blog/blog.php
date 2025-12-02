@@ -44,7 +44,14 @@ printf('<section class="acf blog %s">', $className);
 
 	$actus=get_option( 'page_for_posts' );
 	if($actus) {
-		printf('<div class="text-center"><a href="%s?filtre_cat=toutes">Voir toutes nos actualités</a></div>',get_the_permalink( $actus));
+
+		$label="Voir toutes nos actualités";
+		$filtre="toutes";
+		if(KPLL && pll_current_language()=='en') {
+			$label="Read all news";
+			$filtre="all";
+		}
+		printf('<div class="text-center"><a href="%s?filtre_cat=%s">%s</a></div>',get_the_permalink( $actus),$filtre,$label);
 	}
 
 echo '</section>';

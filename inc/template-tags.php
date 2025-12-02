@@ -321,10 +321,14 @@ function kasutan_affiche_filtre_articles() {
 			'taxonomy' => 'category'
 			) 
 		);
+		$label_all="Toutes";
+		if(KPLL && pll_current_language()=='en') {
+			$label_all="All";
+		}
 		?>
 		<input type="radio" id="toutes" name="filtre-categorie" value="toutes" checked>
-		<label for="toutes" class="toutes">Toutes</label>
 		<?php
+		printf('<label for="toutes" class="toutes">%s</label>',$label_all);
 		foreach($terms as $term) : 
 			$pictos=$classe='';
 			if($avec_pictos) {

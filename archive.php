@@ -33,7 +33,10 @@ function ea_archive_header() {
 
 	} elseif( is_search() ) {
 		$title = 'Résultats de recherche';
+		if(KPLL && pll_current_language()=='en') {
+			$title = 'Search results';
 
+		}
 	} elseif( is_archive() ) {
 		$title = get_the_archive_title();
 	}

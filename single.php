@@ -59,7 +59,11 @@ function kasutan_single_entry_content_after(){
 
 	//Et glisser un lien vers toutes les actualités
 	$actus=get_option( 'page_for_posts' ) ;
-	printf('<div class="retour"><a href="%s">Retour aux actualités</a></div>',get_the_permalink($actus));
+	$label="Retour aux actualités";
+	if(KPLL && pll_current_language()=='en') {
+		$label="Back to News page";
+	}
+	printf('<div class="retour"><a href="%s">%s</a></div>',get_the_permalink($actus),$label);
 }
 
 
