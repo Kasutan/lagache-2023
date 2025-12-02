@@ -20,7 +20,8 @@
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
-            "append": ""
+            "append": "",
+            "pll_default_value": ""
         },
         {
             "key": "field_63c97d6aa3bbe",
@@ -63,7 +64,11 @@
             },
             "default_value": "#C03419",
             "enable_opacity": 0,
-            "return_format": "string"
+            "return_format": "string",
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true,
+            "pll_default_value": "#C03419"
         },
         {
             "key": "field_63c97dd2a3bc0",
@@ -106,6 +111,7 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
+                    "pll_default_value": "",
                     "parent_repeater": "field_63c97dd2a3bc0"
                 },
                 {
@@ -133,6 +139,30 @@
                     "mime_types": "",
                     "preview_size": "medium",
                     "parent_repeater": "field_63c97dd2a3bc0"
+                },
+                {
+                    "key": "field_692f1b94046a6",
+                    "label": "Texte à la place de l'image",
+                    "name": "texte",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "translations": "translate",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "rows": 3,
+                    "placeholder": "",
+                    "new_lines": "br",
+                    "pll_default_value": "",
+                    "parent_repeater": "field_63c97dd2a3bc0"
                 }
             ]
         }
@@ -155,5 +185,7 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1674228566
+    "display_title": "",
+    "pll_display_field_instructions": 0,
+    "modified": 1764695050
 }

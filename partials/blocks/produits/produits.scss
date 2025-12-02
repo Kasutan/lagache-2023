@@ -77,7 +77,11 @@
 					object-fit: cover;
 					width:100%;
 				}
-		
+				&.texte {
+					@include fs(18);
+					font-weight: 500;
+					padding:1rem;
+				}
 			}
 			.nom {
 				background-color: rgba(0,0,0,0.6);

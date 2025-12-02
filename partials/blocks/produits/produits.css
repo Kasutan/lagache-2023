@@ -74,6 +74,11 @@
   object-fit: cover;
   width: 100%;
 }
+.produits .autres-photos .produit .photo.texte {
+  font-size: calc(18 * var(--taille-texte) / 15);
+  font-weight: 500;
+  padding: 1rem;
+}
 .produits .autres-photos .produit .nom {
   background-color: rgba(0, 0, 0, 0.6);
   color: var(--blanc);

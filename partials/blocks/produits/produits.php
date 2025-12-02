@@ -44,9 +44,19 @@ if(function_exists('get_field')) :
 			while ( have_rows('produits') ) : the_row();
 				$photo=esc_attr( get_sub_field('image') );
 				$nom=esc_attr( get_sub_field('nom') );
+				if( empty($photo) ) {
+					$texte = wp_kses_post( get_sub_field('texte') );
+					if(empty($texte)) {
+						continue;
+					}
+				}
 				
 				printf('<li class="produit">');
-					printf('<div class="photo">%s</div>',wp_get_attachment_image( $photo, 'medium_large'));
+					if(!empty($photo)) {
+						printf('<div class="photo">%s</div>',wp_get_attachment_image( $photo, 'medium_large'));
+					} else {
+						printf('<div class="photo texte">%s</div>',$texte);
+					}
 					printf('<h3 class="nom">%s</h3>',$nom);
 				echo '</li>';
 
