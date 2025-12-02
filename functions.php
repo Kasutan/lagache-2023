@@ -39,6 +39,7 @@ include_once( get_template_directory() . '/inc/collaborateurs/fonctions-collabor
 
 // Plugin Support
 include_once( get_template_directory() . '/inc/acf.php' );
+include_once( get_template_directory() . '/inc/polylang.php' );
 
 if ( ! function_exists( 'kasutan_setup' ) ) :
 	/**

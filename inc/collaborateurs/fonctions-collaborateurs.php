@@ -11,6 +11,13 @@ function kasutan_collaborateur_affiche_carte($post_id) {
 		$mobile=wp_kses_post(get_field('mobile',$post_id));
 		$email=wp_kses_post(get_field('email',$post_id));
 
+		if(KPLL && pll_current_language()=='en') {
+			$fonction_en=wp_kses_post(get_field('fonction_en',$post_id));
+			if(!empty($fonction_en)) {
+				$fonction=$fonction_en;
+			}
+		}
+
 		//Prépare liens téls
 		if(function_exists('kasutan_formate_tel')) {
 			$tel_link=kasutan_formate_tel($tel);
