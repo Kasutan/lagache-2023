@@ -38,9 +38,15 @@ function kasutan_main_footer() {
 */
 add_action( 'tha_footer_bottom', 'kasutan_copyright' );
 function kasutan_copyright() {
+	$banquise="Site internet réalisé par 40 degrés sur la banquise";
 	$mentions_legales=false;
 	if(function_exists('get_field')) {
 		$mentions_legales=esc_attr(get_field('page_mentions_legales','option'));
+	}
+	
+	if(KPLL && pll_current_language()=='en') {
+		$mentions_legales=pll_get_post($mentions_legales);
+		$banquise="Website created by 40 degrés sur la banquise";
 	}
 	echo '<div class="copyright">';
 		//printf('<span class="titre">Copyright &copy; 2022 %s %s</span>',get_option('blogname'), date('Y'));
@@ -49,6 +55,6 @@ function kasutan_copyright() {
 			printf('<a href="%s" class="mentions">%s</a>',get_the_permalink( $mentions_legales),get_the_title($mentions_legales));
 			echo '<span class="sep">-</span>';
 		}
-		echo ('<a class="agence" href="https://banquise.com/" rel="noopener noreferrer" target="_blank">Site internet réalisé par 40 degrés sur la banquise</a>');
+		printf('<a class="agence" href="https://banquise.com/" rel="noopener noreferrer" target="_blank">%s</a>',$banquise);
 	echo '</div>';
 }
