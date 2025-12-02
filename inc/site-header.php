@@ -8,6 +8,12 @@ function kasutan_header_top() {
 	if(empty($lien)) {
 		return;
 	}
+	if(KPLL && pll_current_language()=='en') {
+		$lien_en=get_field('lagache_acces_client_en','option');
+		if(!empty($lien_en)) {
+			$lien=$lien_en;
+		}
+	}
 	printf('<a href="%s" class="acces-client" target="%s" rel="noopener noreferrer">%s</a>',
 		esc_url($lien['url']),
 		esc_attr($lien['target']),

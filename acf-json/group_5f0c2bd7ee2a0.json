@@ -23,7 +23,8 @@
             "allow_null": 0,
             "multiple": 0,
             "return_format": "id",
-            "ui": 1
+            "ui": 1,
+            "bidirectional_target": []
         },
         {
             "key": "field_6239a16d7bd62",
@@ -46,7 +47,8 @@
             "allow_null": 0,
             "multiple": 0,
             "return_format": "id",
-            "ui": 1
+            "ui": 1,
+            "bidirectional_target": []
         },
         {
             "key": "field_60a0e771c0bde",
@@ -75,7 +77,7 @@
         },
         {
             "key": "field_63bd3e8fc525b",
-            "label": "Lien vers l'accès client dans l'en-tête",
+            "label": "Lien vers l'accès client dans l'en-tête (français)",
             "name": "lagache_acces_client",
             "aria-label": "",
             "type": "link",
@@ -87,7 +89,27 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array"
+            "return_format": "array",
+            "translations": "copy_once",
+            "allow_in_bindings": 1
+        },
+        {
+            "key": "field_692efd69a22b0",
+            "label": "Lien vers l'accès client dans l'en-tête (anglais)",
+            "name": "lagache_acces_client_en",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "translations": "ignore",
+            "allow_in_bindings": 1
         }
     ],
     "location": [
@@ -108,5 +130,7 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1673347784
+    "display_title": "",
+    "pll_display_field_instructions": 0,
+    "modified": 1764687262
 }
