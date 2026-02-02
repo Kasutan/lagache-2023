@@ -1945,10 +1945,15 @@ button.menu-toggle[aria-expanded=true] svg.fermer-menu {
   height: var(--size);
   margin-right: 30px;
   overflow: hidden;
+  transform-origin: center;
+  transform: scale(0.75);
   width: var(--size);
 }
 .site-footer .nav-social ul li a[href*=twitter] {
   background-image: url("icons/twitter.jpg");
+}
+.site-footer .nav-social ul li a[href*=linkedin] {
+  background-image: url("icons/linkedin.png");
 }
 .site-footer .nav-social ul li:last-of-type a {
   margin-right: 0;

@@ -82,10 +82,15 @@
 				height: var(--size);
 				margin-right: 30px;
 				overflow: hidden;
+				transform-origin: center;
+				transform: scale(0.75);
 				width: var(--size);
 
 				&[href*="twitter"] {
 					background-image: url('icons/twitter.jpg');
+				}
+				&[href*="linkedin"] {
+					background-image: url('icons/linkedin.png');
 				}
 			}
 
